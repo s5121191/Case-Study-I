@@ -1,0 +1,2113 @@
+<?xml version="1.0"?>
+<!DOCTYPE cairis_model PUBLIC "-//CAIRIS//DTD MODEL 1.0//EN" "http://cairis.org/dtd/cairis_model.dtd">
+<cairis_model>
+
+
+<tvtypes>
+<vulnerability_type name="Configuration" >
+  <description>The weakness of a system which is able to exploit the system through its configuration setup.</description>
+</vulnerability_type>
+<vulnerability_type name="Design" >
+  <description>The weakness of a system which is able to exploit the system through its design flaw.</description>
+</vulnerability_type>
+<threat_type name="Manipulation" >
+  <description>Any possible threat which may manipulate the current system.</description>
+</threat_type>
+<threat_type name="Physical" >
+  <description>Any possible physical threat to the system.</description>
+</threat_type>
+</tvtypes>
+
+<domainvalues>
+<threat_value name="None" >
+  <description>To be defined</description>
+</threat_value>
+<threat_value name="Low" >
+  <description>To be defined</description>
+</threat_value>
+<threat_value name="Medium" >
+  <description>To be defined</description>
+</threat_value>
+<threat_value name="High" >
+  <description>To be defined</description>
+</threat_value>
+<risk_value name="Negligible" >
+  <description>
+</description>
+</risk_value>
+<risk_value name="Tolerable" >
+  <description>
+</description>
+</risk_value>
+<risk_value name="Undesirable" >
+  <description>
+</description>
+</risk_value>
+<risk_value name="Intolerable" >
+  <description>
+</description>
+</risk_value>
+<countermeasure_value name="None" >
+  <description>To be defined</description>
+</countermeasure_value>
+<countermeasure_value name="Low" >
+  <description>To be defined</description>
+</countermeasure_value>
+<countermeasure_value name="Medium" >
+  <description>To be defined</description>
+</countermeasure_value>
+<countermeasure_value name="High" >
+  <description>To be defined</description>
+</countermeasure_value>
+<severity_value name="Negligible" >
+  <description>
+</description>
+</severity_value>
+<severity_value name="Marginal" >
+  <description>
+</description>
+</severity_value>
+<severity_value name="Critical" >
+  <description>
+</description>
+</severity_value>
+<severity_value name="Catastrophic" >
+  <description>
+</description>
+</severity_value>
+<likelihood_value name="Incredible" >
+  <description>
+</description>
+</likelihood_value>
+<likelihood_value name="Improbable" >
+  <description>
+</description>
+</likelihood_value>
+<likelihood_value name="Remote" >
+  <description>
+</description>
+</likelihood_value>
+<likelihood_value name="Occasional" >
+  <description>
+</description>
+</likelihood_value>
+<likelihood_value name="Probable" >
+  <description>
+</description>
+</likelihood_value>
+<likelihood_value name="Frequent" >
+  <description>
+</description>
+</likelihood_value>
+</domainvalues>
+
+<cairis>
+<project_settings name="Polish Tram" >
+  <background>The 'Polish Tram' incident is an ideal example where the security breach into a system was responsible for compromising the safety of people in the form of passengers of tram. The incident was logged into 'The Repository of Industrial Security Incidents' in 2008 under the title of School Boy Hacks into Polish Tram System, where a 14-year old boy, a Polish student, hacked into the tram system which enabled him to change track points in Lodz, Poland.  Four trams were derailed. Twelve people were injured when a train derailed.  The boy built an infrared device that looked like a TV remote control that could control all the junctions on the line.  No deaths occurred.  The boy faced a special juvenile court on charges of endangering public safety. </background>
+  <strategic_goals>The goal here is to summarize this Polish Tram case study in CAIRIS model and identify the missing safety elements in CAIRIS.</strategic_goals>
+  <rich_picture image="a0e44fe5-cabb-433b-a8b9-8f5dd5376c37.jpg" />
+  <scope>None</scope>
+</project_settings>
+<environment name="Morning Shift" short_code="Morning" >
+  <definition>The 'Morning Shift' is from 0600-1800hrs. It is expected to be much busier and rushy with passengers. The staff is expected to be vigilant.</definition>
+  <asset_values>
+    <none>To be defined</none>
+    <low>To be defined</low>
+    <medium>To be defined</medium>
+    <high>To be defined</high>
+  </asset_values>
+</environment>
+<environment name="Night Shift" short_code="Night" >
+  <definition>The 'Night Shift' is from 1800-2400hrs. It is expected to be slow and less rushy. </definition>
+  <asset_values>
+    <none>To be defined</none>
+    <low>To be defined</low>
+    <medium>To be defined</medium>
+    <high>To be defined</high>
+  </asset_values>
+</environment>
+</cairis>
+
+<riskanalysis>
+<role name="Locomotive Engineer" type="Stakeholder" short_code="Engineer" >
+  <description>The locomotive engineer is a stakeholder responsible for managing the trams/locomotives involved. The maintenance issues are handled.</description>
+</role>
+<role name="Railway Driver" type="Stakeholder" short_code="Driver" >
+  <description>The railway driver is responsible for driving the trams.</description>
+</role>
+<role name="Railway Manager" type="Stakeholder" short_code="Manager" >
+  <description>All the management issues related to railways are solved by 'Railway Manager'.</description>
+</role>
+<role name="Railway Security" type="Stakeholder" short_code="Security" >
+  <description>The security of the railway stations and their effects on passengers and staff present are looked after by the security guards.</description>
+</role>
+<role name="Railway Ticketing Staff" type="Stakeholder" short_code="Ticketing" >
+  <description>The ticketing system is responsible for issuing tickets to passengers who desire to use the tram system.</description>
+</role>
+<role name="Railway Passenger" type="Stakeholder" short_code="Passenger" >
+  <description>The general public who is using the railway system to get from one place to another.</description>
+</role>
+<role name="Railway Dispatcher" type="Stakeholder" short_code="Dispatcher" >
+  <description>The stakeholder who is responsible for managing the railway traffic signals.</description>
+</role>
+<role name="Railway Signaler" type="Data Subject" short_code="Signaler" >
+  <description>The stakeholder who is going to monitor the railway switches and junctions.</description>
+</role>
+<role name="Track Inspector" type="Stakeholder" short_code="Track Inspector" >
+  <description>The stakeholder who is going to look after the maintenance requirements of tracks on which trams are going to run.</description>
+</role>
+<role name="Power Supply Manager" type="Stakeholder" short_code="Power Supply Manager" >
+  <description>The stakeholder who is going to make sure that uninterrupted power is supplied at the time of railway operations.</description>
+</role>
+<role name="Attacker" type="Attacker" short_code="Attacker" >
+  <description>A 14-year old boy, a Polish student, hacked into the tram system which enabled him to change track points in Lodz, Poland.  Four trams were derailed. Twelve people were injured when a train derailed. </description>
+</role>
+<asset name="Traffic Log" short_code="Traffic Log" type="Information" is_critical="0">
+  <description>Traffic log is maintained for railway traffic.</description>
+  <significance>Traffic Log is used in case of investigations required for accidents.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="availability" value="Medium">
+    <rationale>Required for accident investigations.</rationale>
+  </security_property>
+</asset>
+<asset name="Road Traffic" short_code="Road Traffic" type="Information" is_critical="0">
+  <description>The road traffic also needs to be managed in accordance with railway traffic.</description>
+  <significance>During trains movement the road traffic issues need to be considered like closing of gates and barriers etc.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="integrity" value="Medium">
+    <rationale>Road traffic needs to be managed according to train movements.</rationale>
+  </security_property>
+</asset>
+<asset name="ERTMS Operational Levels" short_code="Operational Levels" type="Information" is_critical="0">
+  <description>The ERTMS operational levels are maintained to ensure safe and efficient regulation of train service.</description>
+  <significance>The train drivers are signaled to identify the appropriate ERTMS levels for driving.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="integrity" value="High">
+    <rationale>Efficient regulation of trains.</rationale>
+  </security_property>
+</asset>
+<asset name="GSM-R Data Radio" short_code="Data Radio" type="Information" is_critical="0">
+  <description>Data Radio is responsible for capturing the GSM-R data packets from network.</description>
+  <significance>Data radio contains information about movement authority signals.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="integrity" value="High">
+    <rationale>Responsible for getting data packets.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="availability" value="Medium">
+    <rationale>Network management.</rationale>
+  </security_property>
+</asset>
+<asset name="On-board Power Supply" short_code="Power Supply" type="Information" is_critical="0">
+  <description>Power supply required to operate the trains.</description>
+  <significance>Without power supply no train operations may take place.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="availability" value="High">
+    <rationale>From main power grid.</rationale>
+  </security_property>
+</asset>
+<asset name="Main Power Grid" short_code="Power Grid" type="Information" is_critical="0">
+  <description>Responsible for supplying power to driving cabs and railway stations.</description>
+  <significance>Without power supply no operations may take place.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="availability" value="High">
+    <rationale>Train movement depend on power supply.</rationale>
+  </security_property>
+</asset>
+<asset name="Driver Advisory System" short_code="DAS" type="Information" is_critical="0">
+  <description>A system through which train driver interacts with on-board system.</description>
+  <significance>Information about Driver ID, Train Movement Route etc,</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="confidentiality" value="Low">
+    <rationale>System displaying the interaction mechanism.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="integrity" value="High">
+    <rationale>No mistakes.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="availability" value="Medium">
+    <rationale>System must be available to drivers.</rationale>
+  </security_property>
+</asset>
+<asset name="European Vital Computer" short_code="EVC" type="Information" is_critical="0">
+  <description>It is the EVC that provides the supervision of the train's movements against all the inputs received from the trackside equipment, onboard odometry, the driver and other stored information.</description>
+  <significance>The EVC provides outputs to the driver through the ERTMS DMI, to other train systems and functions through the Train Interface Unit (TIU) and transmits information back to the RBC.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="confidentiality" value="Low">
+    <rationale>Information about train movement.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="integrity" value="High">
+    <rationale>Supervision of trains movement.</rationale>
+  </security_property>
+</asset>
+<asset name="Train Interface Unit" short_code="TIU" type="Information" is_critical="0">
+  <description>Train function control systems. For example, ERTMS is able to provide information for the command of the change of traction systems, the raising/lowering of an overhead pantograph and command the air tightness function to activate/deactivate where certain trackside data has been received.</description>
+  <significance>The TIU is the means by which ERTMS interfaces to other train systems.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="integrity" value="Medium">
+    <rationale>Interface to all systems used by drivers.</rationale>
+  </security_property>
+</asset>
+<asset name="Radio Block Center" short_code="RBC" type="Information" is_critical="0">
+  <description>The RBC is a computer-based system that generates messages to be sent to the train on the basis of information received from external systems, for example the interlocking, or the ERTMS onboard equipment.</description>
+  <significance>The main objective of these messages is to provide ERTMS MAs to allow the safe movement of trains on the railway infrastructure area under the responsibility of the RBC.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="confidentiality" value="Medium">
+    <rationale>Messages to train.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="integrity" value="High">
+    <rationale>Train movement depends on these messages.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="availability" value="Medium">
+    <rationale>Train operations.</rationale>
+  </security_property>
+</asset>
+<asset name="GSM-R Railway Network" short_code="Network" type="Information" is_critical="0">
+  <description>Railway network which generates data packets.</description>
+  <significance>GSM-R network contains data packets about movement authority.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="confidentiality" value="High">
+    <rationale>Contains data packets for train movement.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="integrity" value="High">
+    <rationale>Train movement signals are given.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="availability" value="Medium">
+    <rationale>Train movement decisions depend on this network.</rationale>
+  </security_property>
+</asset>
+<asset name="GSM-R Data Packets" short_code="Data Packets" type="Information" is_critical="0">
+  <description>Signalers generates data packets over the railway network to train drivers.</description>
+  <significance>Train drivers operate based on instructions in data packets.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="confidentiality" value="High">
+    <rationale>Data packets containing instructions for train movement.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="integrity" value="High">
+    <rationale>Train movement depend on these instructions.</rationale>
+  </security_property>
+</asset>
+<asset name="Movement Authority Signals" short_code="MS Signals" type="Information" is_critical="0">
+  <description>The data signals containing information for movement of trains.</description>
+  <significance>Train drivers rely on these signals generated by signalers for train movement.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="confidentiality" value="High">
+    <rationale>About train movement.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="integrity" value="High">
+    <rationale>Generated by signaler.</rationale>
+  </security_property>
+</asset>
+<asset name="Route Settings Information" short_code="Route Settings" type="Information" is_critical="0">
+  <description>Signaler sets the route for train movement.</description>
+  <significance>Route settings made by signaler lets the driver performs his driving tasks.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="integrity" value="High">
+    <rationale>The route settings must be upto date and appropriate.</rationale>
+  </security_property>
+</asset>
+<asset name="GSM-R Status Record" short_code="GSM-R Status Record" type="Information" is_critical="0">
+  <description>The GSM-R status record for trains movement is maintained by signaler in his workstation.</description>
+  <significance>The record is used in case of any investigations required for accidents or wrong operations.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="integrity" value="Medium">
+    <rationale>Maintained by signaler.</rationale>
+  </security_property>
+</asset>
+<asset name="Faults and Failure Log" short_code="Faults and Failure" type="Information" is_critical="0">
+  <description>The faults and failures identified during operational use is kept in log by Signaler.</description>
+  <significance>It is Signalers job to identify the possible fault and failure responsible for compromising the safety of people.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="availability" value="Medium">
+    <rationale>Log maintenance for future use.</rationale>
+  </security_property>
+</asset>
+<asset name="Impact Log" short_code="Impact Log" type="Information" is_critical="0">
+  <description>The signaler keeps the record for impact of failures faced during operations.</description>
+  <significance>It is Signalers job to anticipate the possible impacts of faults and failures and also maintain its log.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="availability" value="Medium">
+    <rationale>Kept for failures.</rationale>
+  </security_property>
+</asset>
+<asset name="Response Log" short_code="Response Log" type="Information" is_critical="0">
+  <description>The response takes for identified faults and failure is managed and kept in record by signaler.</description>
+  <significance>It is Signalers job to maintain response log for failures.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="availability" value="Medium">
+    <rationale>For future use.</rationale>
+  </security_property>
+</asset>
+<asset name="Recovery Log" short_code="Recovery Log" type="Information" is_critical="0">
+  <description>The recovery actions takes in case of failures are kept in record by signalers.</description>
+  <significance>It is Signalers job to maintain recovery log for future use.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="availability" value="Medium">
+    <rationale>For future use.</rationale>
+  </security_property>
+</asset>
+<asset name="Odometry System" short_code="Odometry" type="Information" is_critical="0">
+  <description>The odometry system on board the train provides ERTMS with both speed and distance travelled information.</description>
+  <significance>This has to be high integrity and so is usually provided by more than one measurement.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="integrity" value="High">
+    <rationale>This has to be high integrity and so is usually provided by more than one measurement.</rationale>
+  </security_property>
+</asset>
+<asset name="ERTMS Driver Machine Interface" short_code="DMI" type="Information" is_critical="0">
+  <description>The ERTMS DMI:
+Provides the means for the driver to enter data into the onboard system.
+Displays actual train speed.
+Displays supervised speed and changes ordered by the ERTMS trackside equipment.
+Displays information about the route ahead (the “planning information”).</description>
+  <significance>DMI also alerts the driver to changes in supervision, errors and other warnings (visually and audibly), including text messages.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="confidentiality" value="Low">
+    <rationale>Means for driver to enter data.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="integrity" value="Medium">
+    <rationale>Display of information to drivers.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="availability" value="High">
+    <rationale>Interface available to drivers.</rationale>
+  </security_property>
+</asset>
+<asset name="Isolation Mode Switch" short_code="Isolation Mode" type="Information" is_critical="0">
+  <description>The ERTMS onboard equipment must incorporate a control that enables it to be physically isolated from the traction unit's braking system and, where required, other onboard systems.</description>
+  <significance>This control should be physically separate from the ERTMS onboard equipment so that the train is not totally immobilised by failure/removal of ERTMS.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="integrity" value="Medium">
+    <rationale>Used in special circumstances.</rationale>
+  </security_property>
+</asset>
+<asset name="ERTMS Reset Button" short_code="Reset" type="Information" is_critical="0">
+  <description>The ERTMS onboard equipment must incorporate a control (ERTMS reset) that enables an authorised user to temporarily interrupt the power supply to the ERTMS onboard equipment (that is, invoke a transition to and out of No Power mode (NP)) without interrupting the power supply to other onboard systems.</description>
+  <significance>The ERTMS reset must be located within each driving cab, but outside the reach zone of the train driver's normal seated position.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="integrity" value="Medium">
+    <rationale>Used in case of emergency or certain special situations.</rationale>
+  </security_property>
+</asset>
+<asset name="Train Route Information" short_code="Route Info" type="Information" is_critical="0">
+  <description>ERTMS DMI displays the train route information for drivers.</description>
+  <significance>Signalers are responsible for generating the route information for drivers which is displayed to them in ERTMS DMI.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="integrity" value="High">
+    <rationale>Defines the route for train movement.</rationale>
+  </security_property>
+</asset>
+<asset name="Text Messages" short_code="Text Messages" type="Information" is_critical="0">
+  <description>The ERTMS onboard equipment will automatically generate system status messages and display these as text messages for the driver to indicate changes of the state of the system.</description>
+  <significance>Risk assessments on the provision of additional text messages must consider the hazard of driver distraction.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="integrity" value="High">
+    <rationale>Text messages generated for drivers.</rationale>
+  </security_property>
+</asset>
+<asset name="Warnings Alert" short_code="Warnings Alert" type="Information" is_critical="0">
+  <description>Text messages, in addition to the automatically generated system status messages, must only be provided where there is a safety, performance or operational need.</description>
+  <significance>Fault and failure indications must support the driver in determining the impact on train operations.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="integrity" value="Medium">
+    <rationale>Alerts generated to drivers in case of emergency.</rationale>
+  </security_property>
+</asset>
+<asset name="Driver Advisory Information" short_code="DAI" type="Information" is_critical="0">
+  <description>The provision of driver advisory information requires a similar data set to that required to be entered for ERTMS operations, for example Driver ID, Train Running Number, braking parameters, and maximum train speed.</description>
+  <significance>Providing an interface for this common information to be shared by DAS and ERTMS may reduce train preparation and driver handover time, and reduce the risk of data entry errors.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="confidentiality" value="Medium">
+    <rationale>No public sharing of information.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="integrity" value="High">
+    <rationale>information needs to be accurate.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="availability" value="Medium">
+    <rationale>Appropriate information must be available to drivers.</rationale>
+  </security_property>
+</asset>
+<asset name="Open Source Public Libraries" short_code="Public Libraries" type="Information" is_critical="0">
+  <description>The open source public libraries are the free source of information available to everyone.</description>
+  <significance>The information can be used to built knowledge base.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="integrity" value="Low">
+    <rationale>Free source of information.</rationale>
+  </security_property>
+</asset>
+<asset name="Internet Codes" short_code="Codes" type="Information" is_critical="0">
+  <description>the codes from internet used for experiment purposes.</description>
+  <significance>The codes are available online to build a infrared remote control for experimentation purposes.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="confidentiality" value="Low">
+    <rationale>Open source information.</rationale>
+  </security_property>
+</asset>
+<asset name="Switches, Track Points and Rail Junctions" short_code="Switches" type="Systems" is_critical="0">
+  <description>The switches and rail junctions are responsible for controlling the directions of locomotives (trams) taking passengers from one place to another.</description>
+  <significance>The switch and rail junctions must be controlled and managed wisely to avoid any accidents.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="confidentiality" value="Low">
+    <rationale>There must be no unauthorized access to control system.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="integrity" value="High">
+    <rationale>The switches and rail junctions must be working accurately to avoid any accidents.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="availability" value="Medium">
+    <rationale>The switches and rail junctions must be working properly during service hours.</rationale>
+  </security_property>
+</asset>
+<asset name="Railway Connection System" short_code="Connection System" type="Systems" is_critical="0">
+  <description>The Railway Connection System comprises of Switches, Track Points and Railway Junctions.</description>
+  <significance>The Tracks by means of which trains and trams travel.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="availability" value="High">
+    <rationale>Train tracks and switches.</rationale>
+  </security_property>
+</asset>
+<asset name="Railway Control System" short_code="Control System" type="Systems" is_critical="0">
+  <description>The railway control system is responsible for managing the train operations.</description>
+  <significance>Railway Control System comprises of Traffic Management and Signalling Control Systems.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="confidentiality" value="Medium">
+    <rationale>Responsible for managing trains.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="integrity" value="High">
+    <rationale>Traffic Management.</rationale>
+  </security_property>
+</asset>
+<asset name="Traffic Management System" short_code="Traffic Mgmt Sys" type="Systems" is_critical="0">
+  <description>The traffic management system keeps the traffic log and also looks after the road traffic.</description>
+  <significance>Traffic Management System ensures the efficient management of train traffic.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="integrity" value="High">
+    <rationale>The integrity of traffic management system is must to ensure safe operations.</rationale>
+  </security_property>
+</asset>
+<asset name="ERTMS Signalling Control System" short_code="Signalling Control" type="Systems" is_critical="0">
+  <description>ERTMS Signalling Control System consists of on-board and track-side equipment control system.</description>
+  <significance>Responsible for managing the signalling control system for railway systems.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="confidentiality" value="Low">
+    <rationale>Information display.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="integrity" value="High">
+    <rationale>Accuracy.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="availability" value="High">
+    <rationale>Routine train operations depend on this system.</rationale>
+  </security_property>
+</asset>
+<asset name="On-board System" short_code="On-board System" type="Systems" is_critical="0">
+  <description>ERTMS on-board system manages ERTMS levels, GSM-R data radio, driver advisory system. </description>
+  <significance>ERTMS On-board System is linked to the Driving Cab.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="confidentiality" value="Low">
+    <rationale>Information to drivers.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="integrity" value="High">
+    <rationale>Train operations depend on it.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="availability" value="Medium">
+    <rationale>Available to train drivers.</rationale>
+  </security_property>
+</asset>
+<asset name="Track-side Equipment System" short_code="Equipment System" type="Systems" is_critical="0">
+  <description>The trackside equipment system manages the radio block center, GSM-R network and GSM-R data packets.</description>
+  <significance>ERTMS Track-side Equipement issues GSM-R Data Packets which are signals for Movement Authority to train drivers.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="integrity" value="High">
+    <rationale>Manages data packets and other signals for train movement.</rationale>
+  </security_property>
+</asset>
+<asset name="ERTMS Fault and Failure Management" short_code="Fault and Failure" type="Systems" is_critical="0">
+  <description>The ERTMS fault and failure management is done by Signaler.</description>
+  <significance>Fault and failure management is done to identify errors before-hand and minimize the risks of any possible hazards.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="integrity" value="Medium">
+    <rationale>Managed by signalers.</rationale>
+  </security_property>
+</asset>
+<asset name="ERTMS Response Management" short_code="Response Management" type="Systems" is_critical="0">
+  <description>It is signalers job to keep logs for response and recovery.</description>
+  <significance>Response and recovery actions takes in relation to fault identified.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="integrity" value="Medium">
+    <rationale>Response management system.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="availability" value="Medium">
+    <rationale>Used to identify faults.</rationale>
+  </security_property>
+</asset>
+<asset name="Trains and Trams" short_code="Train and Trams" type="Hardware" is_critical="0">
+  <description>The trams are vehicles/locomotives responsible for taking passengers from one place to another.</description>
+  <significance>The trams must be secured against any threat or attack.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="integrity" value="High">
+    <rationale>The trams must be active during service hours.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="availability" value="High">
+    <rationale>The trams must be available to passengers during service hours.</rationale>
+  </security_property>
+</asset>
+<asset name="Railway Tracks" short_code="Tracks" type="Hardware" is_critical="0">
+  <description>The railways tracks are means by which connection systems are built.</description>
+  <significance>Railways Tracks are responsible for the transfer of trains and trams from one station to another.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="availability" value="High">
+    <rationale>The tracks must be in operational condition.</rationale>
+  </security_property>
+</asset>
+<asset name="Gates and Barriers" short_code="Gates and Barriers" type="Hardware" is_critical="0">
+  <description>The opening  and closing of gates and barriers during train movement across city.</description>
+  <significance>The gates and barriers are closed in case of train movement to safeguard the road traffic.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="integrity" value="Medium">
+    <rationale>Safeguard the road traffic.</rationale>
+  </security_property>
+</asset>
+<asset name="Signalers Workstation" short_code="Sig Workstation" type="Hardware" is_critical="0">
+  <description>Signalers workstation is the official workplace for signalers from where he performs his tasks.</description>
+  <significance>Signalers Workstations allows the Signaler to make route settings etc.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="availability" value="Medium">
+    <rationale>Open to signaler during his duty.</rationale>
+  </security_property>
+</asset>
+<asset name="Train Driving Cab" short_code="Driving Cab" type="Hardware" is_critical="0">
+  <description>The train driving cab which is connected to ERTMS on-board system</description>
+  <significance>The drivers completes his job by interacting with the driving cab.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="confidentiality" value="Medium">
+    <rationale>Accessible to train drivers.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="integrity" value="High">
+    <rationale>Cab is connected to ERTMS on-board system.</rationale>
+  </security_property>
+</asset>
+<asset name="Infrared Remote Control" short_code="Remote Control" type="Hardware" is_critical="0">
+  <description>The infrared remote control built by a teenager student based on information and coding from internet and used to switch trams by recording signals.</description>
+  <significance>Replay Attacks methodology was used to switch track points of railway system.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="integrity" value="Medium">
+    <rationale>Proper functionality.</rationale>
+  </security_property>
+</asset>
+<asset name="Railway Passengers" short_code="Passengers" type="People" is_critical="0">
+  <description>The people using the Railway Stations.</description>
+  <significance>Railway passengers use the railway service to go from one place to another.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="confidentiality" value="Medium">
+    <rationale>Confidentiality of passengers information.</rationale>
+  </security_property>
+</asset>
+<asset name="Railway Staff" short_code="Staff" type="People" is_critical="0">
+  <description>The Railways Staff manage the Railway Stations.</description>
+  <significance>Railway Staff comprise of different categories and each has to perform his set of duties.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="integrity" value="Medium">
+    <rationale>The railway staff efficiency of jobs and tasks assigned to them.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="availability" value="Medium">
+    <rationale>Railway staff availability during duty hours.</rationale>
+  </security_property>
+</asset>
+<asset name="Train Drivers" short_code="Train Drivers" type="People" is_critical="0">
+  <description>The train driver drives the locomotives based on directions given to him by Signaler.</description>
+  <significance>Train Driver is responsible for taking Passengers and other Staff members in Trains.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="availability" value="Medium">
+    <rationale>Driver's availability during duty hours.</rationale>
+  </security_property>
+</asset>
+<asset name="Railway Management Staff" short_code="Management Staff" type="People" is_critical="0">
+  <description>The railway management staff manages the issues related to proper functioning of railway systems.</description>
+  <significance>Railway Management Staff deals with train driver, railway signallers, passengers and other staff member issues.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="integrity" value="High">
+    <rationale>Accuracy of decisions.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="availability" value="High">
+    <rationale>Railway staff available during duty hours.</rationale>
+  </security_property>
+</asset>
+<asset name="Train Signalers" short_code="Train Signalers" type="People" is_critical="0">
+  <description>The train signalers give driving directives to train drivers.</description>
+  <significance>Train Drivers operations are dependent on Signalers job.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="integrity" value="High">
+    <rationale>Generates signals for train movement.</rationale>
+  </security_property>
+</asset>
+<asset name="Railway Security Guards" short_code="Security Guards" type="People" is_critical="0">
+  <description>The railway security guards are responsible for protecting the premises of railway stations against dangerous intrusion.</description>
+  <significance>Railway Security Guards protect the Railway Stations against physical intrusion.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="availability" value="High">
+    <rationale>During duty hours.</rationale>
+  </security_property>
+</asset>
+<asset name="Railway Station" short_code="Railway Station" type="System of Systems" is_critical="0">
+  <description>Railway stations are the primary entity of focus which comprises of several systems like communication and connection systems, control systems etc.</description>
+  <significance>Railway stations contains a set of assets in itself which need to be secured and protected.</significance>
+  <critical_rationale></critical_rationale>
+  <security_property environment="Morning Shift" property="confidentiality" value="Low">
+    <rationale>Open to public.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="integrity" value="High">
+    <rationale>Safe train operations.</rationale>
+  </security_property>
+  <security_property environment="Morning Shift" property="availability" value="Medium">
+    <rationale>Services available to general public.</rationale>
+  </security_property>
+</asset>
+<vulnerability name="Poland Tram System Working on 1970s Switching System" type="Configuration">
+  <description>The Poland Tram System in 2008 was working on switching system which was introduced in 1970s when there were no cheap universal remote controls available to get an easy access. Though the security engineers should have known the risks way before its occurrence and identified the possible system flaws. Nevertheless, the switching system got ignored.</description>
+  <vulnerability_environment name="Morning Shift" severity="Negligible">
+    <vulnerable_asset name="Switches, Track Points and Rail Junctions" />
+  </vulnerability_environment>
+  <vulnerability_environment name="Night Shift" severity="Critical">
+  </vulnerability_environment>
+</vulnerability>
+<vulnerability name="Poor Architectural Design and Lack of Risk Assessment" type="Design">
+  <description>The switching points are supposed to be safeguarded against switching - there are pressure sensors under the tracks. It appears that the points at Lodz were faulty as according to the documentation available online there was a safety system preventing the points from moving while the tram was passing by (something like a pressure sensor). </description>
+  <vulnerability_environment name="Morning Shift" severity="Catastrophic">
+  </vulnerability_environment>
+  <vulnerability_environment name="Night Shift" severity="Catastrophic">
+  </vulnerability_environment>
+</vulnerability>
+<vulnerability name="Faulty Track Points" type="Design">
+  <description>It appears that the points at Lodz Tram System were faulty as according to the documentation available online there was a safety system preventing the points from moving while the tram was passing by (something like a pressure sensor). </description>
+  <vulnerability_environment name="Morning Shift" severity="Critical">
+    <vulnerable_asset name="Road Traffic" />
+    <vulnerable_asset name="Trains and Trams" />
+    <vulnerable_asset name="Railway Tracks" />
+  </vulnerability_environment>
+</vulnerability>
+<vulnerability name="Reported Problems with Signalling System" type="Design">
+  <description>The Poland Tram System in 2008 was working on switching system which was introduced in 1970s when there were no cheap universal remote controls available to get an easy access. There were problems with Lodz's Network Signaling System reported by the workers. But railway authorities disinterest in improving security provided this loop-hole. </description>
+  <vulnerability_environment name="Morning Shift" severity="Critical">
+    <vulnerable_asset name="Train Route Information" />
+    <vulnerable_asset name="Traffic Management System" />
+  </vulnerability_environment>
+</vulnerability>
+<attacker name="Adam Dabrowski " image="">
+  <description>The 14 year old boy who was able to get into the Polish Tram Network and switch control junctions.
+Four trams were derailed. Twelve people were injured when a train derailed. 
+The boy built an infrared device that looked like a TV remote control that could control all the junctions on the line.  No deaths occurred.  
+The boy faced a special juvenile court on charges of endangering public safety. </description>
+  <attacker_environment name="Morning Shift">
+    <attacker_role name="Attacker" />
+    <motivation name="Hactivism" />
+    <motivation name="Thrill-seeking" />
+    <motivation name="Disruption" />
+    <capability name="Resources/Funding" value="Low" />
+    <capability name="Resources/Equipment" value="Medium" />
+    <capability name="Resources/Personnel and Time" value="High" />
+    <capability name="Knowledge/Books and Manuals" value="High" />
+  </attacker_environment>
+</attacker>
+<threat name="Poland Railway Network Intrusion" type="Manipulation">
+  <method>Need to understand which switching system is used in Polish Tram System and how it can be accessed. Vulnerabilities (Tram network was able to be controlled by Remote Control) of the system network can be exploited</method>
+  <threat_environment name="Morning Shift" likelihood="Occasional" >
+    <threat_attacker name="Adam Dabrowski " />
+    <threatened_asset name="Route Settings Information" />
+    <threatened_asset name="Railway Passengers" />
+    <threatened_asset name="Railway Staff" />
+    <threatened_property name="confidentiality" value="Low">
+      <rationale>The attacker was able to intrude into network.</rationale>
+    </threatened_property>
+    <threatened_property name="integrity" value="Medium">
+      <rationale>Network was responsible for controlling train movements.</rationale>
+    </threatened_property>
+    <threatened_property name="availability" value="Medium">
+      <rationale>Required for train movement decisions.</rationale>
+    </threatened_property>
+  </threat_environment>
+</threat>
+<threat name="Replay Attack" type="Manipulation">
+  <method>The attacker was capable of building a universal IR remote control through which he was able to record signals sent in one place to a set of points and replay the signal back to get some result in another location. The simple concept of replay attacks was used to get in to the tram network system. Many of the universal remote controls have a learning mode, where you hold them in front of the original remote control, and it receives and stores the signal from the original, to be replayed when the corresponding button is pressed. </method>
+  <threat_environment name="Morning Shift" likelihood="Probable" >
+    <threat_attacker name="Adam Dabrowski " />
+    <threatened_asset name="Trains and Trams" />
+    <threatened_asset name="Railway Passengers" />
+    <threatened_asset name="Train Drivers" />
+    <threatened_property name="confidentiality" value="Medium">
+      <rationale>The attacker was able to record train movement signals.</rationale>
+    </threatened_property>
+    <threatened_property name="integrity" value="High">
+      <rationale>Attacker replayed the signals and switched directions of trams.</rationale>
+    </threatened_property>
+  </threat_environment>
+</threat>
+<threat name="Switch Splitting" type="Manipulation">
+  <method>When the front truck of the tram goes one way and the back one goes the other, it's called splitting the switch. It can happen when the switch is manually controlled.</method>
+  <threat_environment name="Morning Shift" likelihood="Occasional" >
+    <threat_attacker name="Adam Dabrowski " />
+    <threatened_asset name="Trains and Trams" />
+    <threatened_property name="confidentiality" value="Low">
+      <rationale>Attacker got into railway switching system.</rationale>
+    </threatened_property>
+    <threatened_property name="integrity" value="High">
+      <rationale>Able to alter switches.</rationale>
+    </threatened_property>
+  </threat_environment>
+</threat>
+<risk name="Unauthorised Access into the Poland Railway Signalling System" vulnerability="Poland Tram System Working on 1970s Switching System" threat="Poland Railway Network Intrusion">
+  <misusecase environment="Morning Shift">
+    <narrative>The Poland Tram System in 2008 was working on switching system which was introduced in 1970s when there were no cheap universal remote controls available to get an easy access. Though the security engineers should have known the risks way before its occurrence and identified the possible system flaws. As the threat of network intrusion may have caused the risk of unauthorized access into the signalling system.</narrative>
+  </misusecase>
+</risk>
+<risk name="Injury of Railway Staff or Passengers" vulnerability="Poor Architectural Design and Lack of Risk Assessment" threat="Poland Railway Network Intrusion">
+  <misusecase environment="Morning Shift">
+    <narrative>Due to the lack of risk assessment and poor architectural design there was a threat of network intrusion and it may have harmed the staff and passengers due to collision or disruption of services.</narrative>
+  </misusecase>
+</risk>
+<risk name="Switching of Railway Junctions" vulnerability="Reported Problems with Signalling System" threat="Replay Attack">
+  <misusecase environment="Morning Shift">
+    <narrative>Due to the reported problems with the Poland Train Signalling System, there was a possible threat of Replay Attacks where the attacker was capable of building a universal IR remote control through which he was able to record signals sent in one place to a set of points and replay the signal back to get some result in another location. As a result of which there was a probable risk of switching of railway junctions.</narrative>
+  </misusecase>
+</risk>
+<risk name="Train Derailment" vulnerability="Faulty Track Points" threat="Switch Splitting">
+  <misusecase environment="Morning Shift">
+    <narrative>It appears that the track points at Lodz Railway System were faulty as according to the documentation available online. Due to which there was a threat of switch splitting by the attacker which may cause the risk of train derailment.</narrative>
+  </misusecase>
+</risk>
+<asset_association environment="Morning Shift"  head_name="ERTMS Driver Machine Interface" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1" tail_adornment="Association" tail_nav="1" tail_name="Warnings Alert" rationale="" />
+<asset_association environment="Morning Shift"  head_name="ERTMS Driver Machine Interface" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1" tail_adornment="Association" tail_nav="1" tail_name="Text Messages" rationale="" />
+<asset_association environment="Morning Shift"  head_name="ERTMS Driver Machine Interface" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1" tail_adornment="Association" tail_nav="1" tail_name="Train Route Information" rationale="" />
+<asset_association environment="Morning Shift"  head_name="ERTMS Signalling Control System" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1" tail_adornment="Association" tail_nav="0" tail_name="On-board System" rationale="" />
+<asset_association environment="Morning Shift"  head_name="ERTMS Signalling Control System" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1" tail_adornment="Association" tail_nav="0" tail_name="Track-side Equipment System" rationale="" />
+<asset_association environment="Morning Shift"  head_name="On-board System" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1" tail_adornment="Association" tail_nav="1" tail_name="Driver Advisory System" rationale="" />
+<asset_association environment="Morning Shift"  head_name="On-board System" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1" tail_adornment="Association" tail_nav="1" tail_name="On-board Power Supply" rationale="" />
+<asset_association environment="Morning Shift"  head_name="On-board System" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1" tail_adornment="Association" tail_nav="1" tail_name="ERTMS Operational Levels" rationale="" />
+<asset_association environment="Morning Shift"  head_name="On-board System" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1" tail_adornment="Association" tail_nav="1" tail_name="GSM-R Data Radio" rationale="" />
+<asset_association environment="Morning Shift"  head_name="On-board System" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1" tail_adornment="Association" tail_nav="1" tail_name="European Vital Computer" rationale="" />
+<asset_association environment="Morning Shift"  head_name="On-board System" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1" tail_adornment="Association" tail_nav="0" tail_name="Train Interface Unit" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Radio Block Center" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1" tail_adornment="Association" tail_nav="0" tail_name="GSM-R Railway Network" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Railway Control System" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1" tail_adornment="Association" tail_nav="1" tail_name="Traffic Management System" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Railway Control System" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1" tail_adornment="Association" tail_nav="0" tail_name="ERTMS Signalling Control System" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Track-side Equipment System" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1" tail_adornment="Association" tail_nav="1" tail_name="Radio Block Center" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Train Driving Cab" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1" tail_adornment="Association" tail_nav="1" tail_name="Odometry System" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Train Driving Cab" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1" tail_adornment="Association" tail_nav="1" tail_name="ERTMS Driver Machine Interface" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Train Driving Cab" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1" tail_adornment="Association" tail_nav="1" tail_name="Isolation Mode Switch" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Train Driving Cab" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1" tail_adornment="Association" tail_nav="1" tail_name="ERTMS Reset Button" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Train Drivers" head_nav="0" head_adornment="Association" head_nry="1..a" head_role="" tail_role="" tail_nry="1" tail_adornment="Association" tail_nav="1" tail_name="Train Driving Cab" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Train Signalers" head_nav="0" head_adornment="Association" head_nry="1..a" head_role="" tail_role="" tail_nry="1" tail_adornment="Association" tail_nav="1" tail_name="Signalers Workstation" rationale="" />
+<asset_association environment="Morning Shift"  head_name="ERTMS Fault and Failure Management" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="a" tail_adornment="Association" tail_nav="1" tail_name="Faults and Failure Log" rationale="" />
+<asset_association environment="Morning Shift"  head_name="ERTMS Fault and Failure Management" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="a" tail_adornment="Association" tail_nav="1" tail_name="Impact Log" rationale="" />
+<asset_association environment="Morning Shift"  head_name="ERTMS Response Management" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="a" tail_adornment="Association" tail_nav="1" tail_name="Recovery Log" rationale="" />
+<asset_association environment="Morning Shift"  head_name="ERTMS Response Management" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="a" tail_adornment="Association" tail_nav="1" tail_name="Response Log" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Traffic Management System" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1..a" tail_adornment="Association" tail_nav="0" tail_name="Traffic Log" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Driver Advisory System" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1..a" tail_adornment="Association" tail_nav="1" tail_name="Driver Advisory Information" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Railway Connection System" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1..a" tail_adornment="Association" tail_nav="1" tail_name="Switches, Track Points and Rail Junctions" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Railway Connection System" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1..a" tail_adornment="Association" tail_nav="1" tail_name="Railway Tracks" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Railway Station" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1..a" tail_adornment="Association" tail_nav="0" tail_name="Railway Connection System" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Railway Station" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1..a" tail_adornment="Association" tail_nav="0" tail_name="Railway Control System" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Railway Station" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1..a" tail_adornment="Association" tail_nav="0" tail_name="Railway Passengers" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Railway Station" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1..a" tail_adornment="Association" tail_nav="0" tail_name="Railway Staff" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Signalers Workstation" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1..a" tail_adornment="Association" tail_nav="1" tail_name="Route Settings Information" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Signalers Workstation" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1..a" tail_adornment="Association" tail_nav="1" tail_name="GSM-R Status Record" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Signalers Workstation" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1..a" tail_adornment="Association" tail_nav="1" tail_name="ERTMS Fault and Failure Management" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Signalers Workstation" head_nav="0" head_adornment="Association" head_nry="1" head_role="" tail_role="" tail_nry="1..a" tail_adornment="Association" tail_nav="1" tail_name="ERTMS Response Management" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Railway Staff" head_nav="0" head_adornment="Association" head_nry="1..a" head_role="" tail_role="" tail_nry="1..a" tail_adornment="Association" tail_nav="1" tail_name="Railway Management Staff" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Railway Staff" head_nav="0" head_adornment="Association" head_nry="1..a" head_role="" tail_role="" tail_nry="1..a" tail_adornment="Association" tail_nav="1" tail_name="Railway Security Guards" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Railway Staff" head_nav="0" head_adornment="Association" head_nry="1..a" head_role="" tail_role="" tail_nry="1..a" tail_adornment="Association" tail_nav="1" tail_name="Train Drivers" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Railway Staff" head_nav="0" head_adornment="Association" head_nry="1..a" head_role="" tail_role="" tail_nry="1..a" tail_adornment="Association" tail_nav="1" tail_name="Train Signalers" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Traffic Management System" head_nav="0" head_adornment="Association" head_nry="1..a" head_role="" tail_role="" tail_nry="1..a" tail_adornment="Association" tail_nav="0" tail_name="Road Traffic" rationale="" />
+<asset_association environment="Morning Shift"  head_name="GSM-R Data Packets" head_nav="0" head_adornment="Association" head_nry="1..a" head_role="" tail_role="" tail_nry="1..a" tail_adornment="Association" tail_nav="0" tail_name="Movement Authority Signals" rationale="" />
+<asset_association environment="Morning Shift"  head_name="GSM-R Railway Network" head_nav="0" head_adornment="Association" head_nry="1..a" head_role="" tail_role="" tail_nry="1..a" tail_adornment="Association" tail_nav="0" tail_name="GSM-R Data Packets" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Infrared Remote Control" head_nav="0" head_adornment="Association" head_nry="1..a" head_role="" tail_role="" tail_nry="1..a" tail_adornment="Association" tail_nav="0" tail_name="Internet Codes" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Infrared Remote Control" head_nav="0" head_adornment="Association" head_nry="1..a" head_role="" tail_role="" tail_nry="1..a" tail_adornment="Association" tail_nav="0" tail_name="Open Source Public Libraries" rationale="" />
+<asset_association environment="Morning Shift"  head_name="On-board Power Supply" head_nav="0" head_adornment="Association" head_nry="1..a" head_role="" tail_role="" tail_nry="1..a" tail_adornment="Association" tail_nav="0" tail_name="Main Power Grid" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Railway Station" head_nav="0" head_adornment="Association" head_nry="1..a" head_role="" tail_role="" tail_nry="1..a" tail_adornment="Association" tail_nav="0" tail_name="Trains and Trams" rationale="" />
+<asset_association environment="Morning Shift"  head_name="Road Traffic" head_nav="0" head_adornment="Association" head_nry="1..a" head_role="" tail_role="" tail_nry="1..a" tail_adornment="Association" tail_nav="0" tail_name="Gates and Barriers" rationale="" />
+
+</riskanalysis>
+
+<usability>
+<persona name="Adam " type="Negative" assumption_persona="FALSE" image="691b7f6a-0cf1-47e6-bce3-7ed4278a7aa4.jpg" >
+  <activities>Adam is a teen-age IT student with good academic skills. Adam takes keen interest in his 'Electronics' class and is considered a genius by his teachers. After reading about railways during his school exercise, the boy has started to show some interest in railways. He has spent months studying about Lodz Tram System. He is often found killing his leisure time by trespassing at Tram Depots to gather information and equipment which can be re-used in creative ways. Apart from that, learning the coding skills from open-source public libraries by using internet is also his favorite job. </activities>
+  <attitudes>Adam is a careless boy who is often found roaming around tram stations and not much concerned about trespassing or breaking any rules. He testified for breaking into the tram network and switching junctions. He is a boy who is just curious and lacks the money to fulfill his curiosity, hence learnt the coding for building infrared remote control from internet. His non-serious behavior as a teenager was responsible for triggering the chaos. 
+There were problems with Lodz's Network Signaling System reported by the workers. But railway authorities disinterest in improving security provided this loop-hole. Adam was able to exploit this vulnerability by getting into the Lodz Tram Network and derail trams.
+</attitudes>
+  <aptitudes>Adam has been found taking part in activities, where he was responsible for train derailments. Despite being not appreciated for his this passion, he tempts to use his knowledge in new and exciting ways. Recently he was found responsible for getting into Lodz Tram Network which caused the havoc. The device he used to control track points was found by police at his home. He has been sent to juvenile court on charges of endangering public safety.</aptitudes>
+  <motivations>Adam as a young computer expert has broken into computer systems by exploiting their vulnerabilities. He wants to implement his knowledge in real world by getting into the tram network and maneuver the track points. A model student whose idea is to play with trains by considering them as his own giant personalized train set. A careless behavior displayed by a teenager who modified track points for fun, as a prank. Luckily there were no deaths. He has no intent to hurt people; he just forgot to think about the possible consequences.</motivations>
+  <skills>Adam has experience working with small electronic projects during his school exercises. He has read about railway junctions as part of lesson during his class and also by observing nearby tram stations. He also likes to read about electronics from internet and knows how to develop small scale infrared remote controls.</skills>
+  <intrinsic>TBC</intrinsic>
+  <contextual>TBC</contextual>
+  <persona_environment name="Morning Shift" is_direct="FALSE" >
+    <persona_role name="Attacker" />
+    <narrative>Adam is a teen-age IT student with good academic skills. After reading about railways during his school exercise, the boy has started to show some interest in railways. He has spent months studying about Lodz Tram System. He is often found killing his leisure time by trespassing at Tram Depots to gather information and equipment which can be re-used in creative ways. He is a boy who is just curious and lacks the money to fulfill his curiosity, hence learnt the coding for building infrared remote control from internet.  
+There were problems with Lodz's Network Signaling System reported by the workers. But railway authorities disinterest in improving security provided this loop-hole. Adam was able to exploit this vulnerability by getting into the Lodz Tram Network and derail trams. Luckily there were no deaths. He testified for breaking into the tram network and switching junctions.
+He has been sent to juvenile court on charges of endangering public safety.</narrative>
+  </persona_environment>
+</persona>
+<persona name="Ben" type="Primary" assumption_persona="FALSE" image="" >
+  <activities>Ben as train driver is managing his operations by the help of ERTMS Driver Machine Interface. Through ERTMS DMI Ben enters data into onboard system. Ben gets the information about his train route displayed on his DMI. In order to ensure safe movement of trains Ben takes action based on movement authority sent to him. 
+There are some activities which Ben performs to ensure efficient movement of trains like switching of isolation mode. It is Ben's job to identify the End of Authority for trains. Ben's driving cab has ERTMS Reset and sometimes under special circumstances he has the authority to reset. It is Ben's job to keep on observing signals for danger and stop the train immediately to avoid accidents. 
+</activities>
+  <attitudes>Ben's driving cab is connected to ERTMS on-board equipment through which he gets the Driver Advisory Information like Driver ID, Train Running Number etc on his screen. Ben is also able to pass messages through ERTMS on-board equipment to ERTMS trackside equipment as a part of his routine. 
+Ben is able to take operational control decisions of his vehicle by the help of information displayed on his ERTMS Driver Machine Interface. The ERTMS DMI displays him speed limit, train positions etc. He also gets alerts in case of any errors or warnings, and even change in supervision is communicated to him through ERTMS DMI. Ben has no room for making any mistakes while interpreting this information even when notified about stop markers.
+A major part of his job is to get signal directives by communicating with train signaler. The train signaler is responsible for advising Ben about ERTMS mode required, maximum speed allowed, permission to precede movement etc. In case of any failure Ben is notified by signaler and he has to take appropriate actions accordingly. Ben's job will be compromised if due to momentary loss of signal detection he is unable to receive data packets which contain information on operations of trains transmitted via GSM-R technology.
+</attitudes>
+  <aptitudes>Ben has a huge responsibility for controlling movement of trains which carries passengers and other staff members; hence he needs to remain vigilant during duty hours. His active state of mind is must for making accurate decisions during job. Sometimes during driving Ben even receives text messages as a part of ERTMS operational control job. These might be a cause of distraction and lead to safety hazards.
+As a major part of his job, he is responsible for switching in between different ERTMS levels for train movement control. Ben is making all decisions by interacting with ERTMS Driver Machine Interface, thus the reliability and availability of ERTMS DMI is directly affecting his tasks efficiency.
+</aptitudes>
+  <motivations>TBC</motivations>
+  <skills>TBC</skills>
+  <intrinsic>TBC</intrinsic>
+  <contextual>TBC</contextual>
+  <persona_environment name="Morning Shift" is_direct="FALSE" >
+    <persona_role name="Railway Driver" />
+    <narrative>Driver Persona.</narrative>
+  </persona_environment>
+  <persona_environment name="Night Shift" is_direct="FALSE" >
+    <narrative></narrative>
+  </persona_environment>
+</persona>
+<persona name="Daniel" type="Primary" assumption_persona="FALSE" image="21d39723-d41c-403d-82f1-a70635541817.jpg" >
+  <activities>Daniel is performing the job of Signaler in an ERTMS area. As a signaler, he is responsible for the administration of train drivers by keeping track of their reported vehicle positions. Daniel updates the Route Settings as a part of ERTMS signaling control operations. He can initiate a cancellation request for a route upon certain circumstances, but he is not authorized enough to make signaling control decisions by himself. He has to make route decisions for train movement and ensure safety. 
+Daniel working from his signalers workstation is responsible for monitoring and controlling the train movement safely and efficiently.
+</activities>
+  <attitudes>As a part of his routine, Daniel is supervising train drivers. The train drivers precede their journey based on directives from signaler. Daniel as a signaler plans the journey information based on ERTMS principles which becomes visible to train drivers. 
+Daniel also keeps record of GSM-R status of every vehicle. In case, of any incident the investigation can be conducted using the traffic information kept as evidence by Daniel.
+</attitudes>
+  <aptitudes>Daniel has to be vigilant while make train signaling control and operation decisions, as they may lead to hazardous events if managed poorly. He has to ensure efficient regulation of trains. In order to fulfill safe operations, he has to be able to identify possible faults that could possibly compromise the safety. 
+Daniel as management of ERTMS failures is authorized to inform the nature of faults identified during operation. He is also authorized to determine the failure impact on train operations and possible responses for these faults. After recovery of trains from system failures it is Daniels job to resume their usage. 
+</aptitudes>
+  <motivations>He has to manage the signaling control and operations for train movement, and has to make sure that safety of people is not compromised at any cost. The interoperability of control and command of signaling technical specifications is primary responsibility of Daniel. He has to advise train drivers regarding their movement, maximum speed and ERTMS mode required. In case of emergency, he also has to alert the train drivers. During train movement Daniel has to manage the closing of barriers and gates to road traffic. His maximum effort should be to minimize any possible hazardous events. 
+Daniel has to make definite and sustained actions and anticipate errors even before their occurrence.  
+</motivations>
+  <skills>TBC</skills>
+  <intrinsic>TBC</intrinsic>
+  <contextual>TBC</contextual>
+  <persona_environment name="Morning Shift" is_direct="FALSE" >
+    <persona_role name="Railway Signaler" />
+    <narrative>Signaller Persona.</narrative>
+  </persona_environment>
+  <persona_environment name="Night Shift" is_direct="FALSE" >
+    <narrative></narrative>
+  </persona_environment>
+</persona>
+<external_document name="Polish Teen Hacks His City Tram, Chaos Ensues" version="1" date="Jan 2008" authors="Chuck Squatriglia" >
+  <description>Wired Article: https://www.wired.com/2008/01/polish-teen-hac/</description>
+</external_document>
+<external_document name="Hacking Polish Trams" version="1" date="Jan 2008" authors="Bruce Schneier" >
+  <description>Schneier on Security Article: https://www.schneier.com/blog/archives/2008/01/hacking_the_pol.html</description>
+</external_document>
+<external_document name="School Boy Hacks into Polish Tram System - RISI Log" version="1" date="Jan 2008" authors="Anon" >
+  <description>Repository of Industrial Security Incidents Log</description>
+</external_document>
+<external_document name="Polish Teen Derails Tram After Hacking Train Network" version="1" date="Jan 2008" authors="John Leyden" >
+  <description>The Register Article: https://www.theregister.co.uk/2008/01/11/tram_hack/</description>
+</external_document>
+<external_document name="Teen Derailed Trams with Home-Made Device - Police" version="1" date="Jan 2008" authors="Anon" >
+  <description>The Sydney Morning Herald Article: https://www.smh.com.au/world/teen-derailed-trams-with-home-made-device-police-20080110-gdrw8g.html</description>
+</external_document>
+<external_document name="Teen Hacker in Poland Plays Trains and Derails City Tram System" version="1" date="Jan 2008" authors="Shelley Smith" >
+  <description>Homeland Security Article: https://inhomelandsecurity.com/teen_hacker_in_poland_plays_tr/</description>
+</external_document>
+<external_document name="School Boy Hacks into Citys Tram System" version="1" date="Jan 2008" authors="Graeme Baker" >
+  <description>The Telegraph Article: https://www.telegraph.co.uk/news/worldnews/1575293/Schoolboy-hacks-into-citys-tram-system.html</description>
+</external_document>
+<external_document name="European Rail Traffic Management System - Signalling Principles" version="2" date="Dec 2014" authors="Rail Safety and Standards Board" >
+  <description>RSSB - ERTMS - Operational Concept</description>
+</external_document>
+<external_document name="European Rail Traffic Management System - Signalling Control" version="2" date="Dec 2014" authors="Rail Safety and Standards Board" >
+  <description>RSSB - ERTMS - Operational Concept</description>
+</external_document>
+<external_document name="European Rail Traffic Management System - System Architecture" version="2" date="Dec 2014" authors="Rail Safety and Standards Board" >
+  <description>RSSB - ERTMS - Operational Concept</description>
+</external_document>
+<external_document name="European Rail Traffic Management System - Application Levels" version="2" date="Dec 2014" authors="Rail Safety and Standards Board" >
+  <description>RSSB - ERTMS - Operational Concept</description>
+</external_document>
+<external_document name="European Rail Traffic Management System - Operating Modes" version="2" date="Dec 2014" authors="Rail Safety and Standards Board" >
+  <description>RSSB - ERTMS - Operational Concept</description>
+</external_document>
+<external_document name="Principles of European Rail Traffic Management System" version="2" date="Dec 2014" authors="Rail Safety and Standards Board" >
+  <description>RSSB - ERTMS - Operational COncept</description>
+</external_document>
+<document_reference name="Homemade Transmitter that Tripped Rail Switches and Redirected Trains" contributor="Amna Altaf" document="Polish Teen Hacks His City Tram, Chaos Ensues" >
+  <excerpt>Made a transmitter to switch trains.</excerpt>
+</document_reference>
+<document_reference name="Prank that Derailed Four Trams" contributor="Amna Altaf" document="Polish Teen Hacks His City Tram, Chaos Ensues" >
+  <excerpt>Luckily nobody was killed. 12 People were hurt.</excerpt>
+</document_reference>
+<document_reference name="Described by His Teachers as an Electronics Genius" contributor="Amna Altaf" document="Polish Teen Hacks His City Tram, Chaos Ensues" >
+  <excerpt>Good working knowledge of Electronics.</excerpt>
+</document_reference>
+<document_reference name="Spent Months Studying the Citys Rail Lines" contributor="Amna Altaf" document="Polish Teen Hacks His City Tram, Chaos Ensues" >
+  <excerpt>Due to curiosity and his personal interests.</excerpt>
+</document_reference>
+<document_reference name="Caused the Havoc" contributor="Amna Altaf" document="Polish Teen Hacks His City Tram, Chaos Ensues" >
+  <excerpt>The teenager was found responsible for causing the havoc.</excerpt>
+</document_reference>
+<document_reference name="Converted an Old TV Remote into an Infrared Transmitter " contributor="Amna Altaf" document="Polish Teen Hacks His City Tram, Chaos Ensues" >
+  <excerpt>Based on his knowledge from Electronics Class and information from Internet.</excerpt>
+</document_reference>
+<document_reference name=" Luckily Nobody was Killed" contributor="Amna Altaf" document="Polish Teen Hacks His City Tram, Chaos Ensues" >
+  <excerpt>No deaths occurred.</excerpt>
+</document_reference>
+<document_reference name="Had to Make Emergency Stops" contributor="Amna Altaf" document="Polish Teen Hacks His City Tram, Chaos Ensues" >
+  <excerpt>To prevent further chaos.</excerpt>
+</document_reference>
+<document_reference name="Did Not Think About the Consequences of His Actions" contributor="Amna Altaf" document="Polish Teen Hacks His City Tram, Chaos Ensues" >
+  <excerpt>Did not thinks about the possible consequences for his careless behavior.</excerpt>
+</document_reference>
+<document_reference name="Level 2 - Radio Based System" contributor="Amna Altaf" document="Polish Teen Hacks His City Tram, Chaos Ensues" >
+  <excerpt>Computer based system that generates messages.</excerpt>
+</document_reference>
+<document_reference name="Problems with the Signalling System on Lodzs Tram Network " contributor="Amna Altaf" document="Hacking Polish Trams" >
+  <excerpt>The kid exploited this weakness to derail trams.</excerpt>
+</document_reference>
+<document_reference name="Transport Staff Suspected Outside Interference" contributor="Amna Altaf" document="Hacking Polish Trams" >
+  <excerpt>After the network was hacked and trams were derailed.</excerpt>
+</document_reference>
+<document_reference name=" Learn the Coding" contributor="Amna Altaf" document="Hacking Polish Trams" >
+  <excerpt>Using class material and open source information from Internet.</excerpt>
+</document_reference>
+<document_reference name="Kid Reverse Engineered the IR Control Protocol" contributor="Amna Altaf" document="Hacking Polish Trams" >
+  <excerpt>The kid based on his knowledge was able to find the vulnerabilities within the system.</excerpt>
+</document_reference>
+<document_reference name="Juvenile Court on Charges of Endangering Public Safety" contributor="Amna Altaf" document="School Boy Hacks into Polish Tram System - RISI Log" >
+  <excerpt>The after-effects of incident.</excerpt>
+</document_reference>
+<document_reference name="Control Railway Junctions" contributor="Amna Altaf" document="School Boy Hacks into Polish Tram System - RISI Log" >
+  <excerpt>Implementation of Knowledge.</excerpt>
+</document_reference>
+<document_reference name="Triggering Chaos and Derailing Four Vehicles" contributor="Amna Altaf" document="Polish Teen Derails Tram After Hacking Train Network" >
+  <excerpt>He did it just for fun purposes.</excerpt>
+</document_reference>
+<document_reference name="Modified Track Settings for a Prank" contributor="Amna Altaf" document="Polish Teen Derails Tram After Hacking Train Network" >
+  <excerpt>Did it as a Prank.</excerpt>
+</document_reference>
+<document_reference name="Studied the Trams and the Tracks for a Long Time" contributor="Amna Altaf" document="Polish Teen Derails Tram After Hacking Train Network" >
+  <excerpt>Used to spend his free time by reading about Trams and Tracks.</excerpt>
+</document_reference>
+<document_reference name="School Exercise Book About Junctions to Move Trams and Signals to Change" contributor="Amna Altaf" document="Polish Teen Derails Tram After Hacking Train Network" >
+  <excerpt>Made his curious and wanted to explore further.</excerpt>
+</document_reference>
+<document_reference name="No Deaths Occurred" contributor="Amna Altaf" document="Polish Teen Derails Tram After Hacking Train Network" >
+  <excerpt>No deaths occurred as a result of incident.</excerpt>
+</document_reference>
+<document_reference name="Lodzs Tram Network was Hacked" contributor="Amna Altaf" document="Polish Teen Derails Tram After Hacking Train Network" >
+  <excerpt>Exploitation of system weakness.</excerpt>
+</document_reference>
+<document_reference name="Exemplary Student" contributor="Amna Altaf" document="Polish Teen Derails Tram After Hacking Train Network" >
+  <excerpt>Just dependent on his basic knowledge as taught in class. No additional training.</excerpt>
+</document_reference>
+<document_reference name="Police Arrested a Polish Teenager" contributor="Amna Altaf" document="Teen Derailed Trams with Home-Made Device - Police" >
+  <excerpt>On charges of endangering public safety.</excerpt>
+</document_reference>
+<document_reference name="Used the Infrared Remote Control Device to Switch Tram Tracks " contributor="Amna Altaf" document="Teen Derailed Trams with Home-Made Device - Police" >
+  <excerpt>Exploration of Knowledge</excerpt>
+</document_reference>
+<document_reference name="Teenager Testified He Switched Tram Tracks Three Times" contributor="Amna Altaf" document="Teen Derailed Trams with Home-Made Device - Police" >
+  <excerpt>Found Guilty for Endangering Public Safety.</excerpt>
+</document_reference>
+<document_reference name="Search At The Suspects Home Turned Up The Device" contributor="Amna Altaf" document="Teen Derailed Trams with Home-Made Device - Police" >
+  <excerpt>The Infrared Remote Control used to derail Trams.</excerpt>
+</document_reference>
+<document_reference name="Responsible For Several Other Recent Tram Derailments" contributor="Amna Altaf" document="Teen Derailed Trams with Home-Made Device - Police" >
+  <excerpt>Based on Previous Record.</excerpt>
+</document_reference>
+<document_reference name="Trespassed At Tram Depots to Gather Information " contributor="Amna Altaf" document="Teen Derailed Trams with Home-Made Device - Police" >
+  <excerpt>Wander around tram stations and observe the working of railways.</excerpt>
+</document_reference>
+<document_reference name="Trespassed at the Tram Stations to Gather Equipment for Device" contributor="Amna Altaf" document="Teen Derailed Trams with Home-Made Device - Police" >
+  <excerpt>Re-used easily accessible equipment.</excerpt>
+</document_reference>
+<document_reference name="Sent to Detention Centre for Juvenile Delinquents." contributor="Amna Altaf" document="Teen Derailed Trams with Home-Made Device - Police" >
+  <excerpt>As consequences of incident.</excerpt>
+</document_reference>
+<document_reference name="A Model Student - Playing with Trains" contributor="Amna Altaf" document="Teen Hacker in Poland Plays Trains and Derails City Tram System" >
+  <excerpt>Student with IT background.</excerpt>
+</document_reference>
+<document_reference name="Lodz Tram System into His Own Personal Train Set" contributor="Amna Altaf" document="Teen Hacker in Poland Plays Trains and Derails City Tram System" >
+  <excerpt>Due to his interests in Railways.</excerpt>
+</document_reference>
+<document_reference name="Using Public Library and Open Source Information From The Internet" contributor="Amna Altaf" document="Teen Hacker in Poland Plays Trains and Derails City Tram System" >
+  <excerpt>Using the open source information from Internet which is freely available.</excerpt>
+</document_reference>
+<document_reference name="Modifying a TV Remote Control" contributor="Amna Altaf" document="Teen Hacker in Poland Plays Trains and Derails City Tram System" >
+  <excerpt>Trespassing in tram depots to gather information needed to build a device made by modifying a TV remote control.</excerpt>
+</document_reference>
+<document_reference name="Hacked into The Train Network" contributor="Amna Altaf" document="Teen Hacker in Poland Plays Trains and Derails City Tram System" >
+  <excerpt>Used his knowledge to gain unauthorized acess.</excerpt>
+</document_reference>
+<document_reference name="Maneuver the Trams and Change Track Points" contributor="Amna Altaf" document="Teen Hacker in Poland Plays Trains and Derails City Tram System" >
+  <excerpt>Gain unauthorized control.</excerpt>
+</document_reference>
+<document_reference name="Did it as a Prank" contributor="Amna Altaf" document="Teen Hacker in Poland Plays Trains and Derails City Tram System" >
+  <excerpt>Careless attitude.</excerpt>
+</document_reference>
+<document_reference name="Looms The Vulnerabilities From Unseen Computer Hackers" contributor="Amna Altaf" document="Teen Hacker in Poland Plays Trains and Derails City Tram System" >
+  <excerpt>The vulnerability of the Tram System was exploited out of curiosity.</excerpt>
+</document_reference>
+<document_reference name="Workers Reported Security Gaps " contributor="Amna Altaf" document="Teen Hacker in Poland Plays Trains and Derails City Tram System" >
+  <excerpt>No prior action was taken.</excerpt>
+</document_reference>
+<document_reference name="Disinterest in Improving Security by Railway Authorities" contributor="Amna Altaf" document="Teen Hacker in Poland Plays Trains and Derails City Tram System" >
+  <excerpt>Loop hole on the behalf of Railway Management and System. </excerpt>
+</document_reference>
+<document_reference name="Involved in Several Similar Incidents" contributor="Amna Altaf" document="School Boy Hacks into Citys Tram System" >
+  <excerpt>Based on Previous Record.</excerpt>
+</document_reference>
+<document_reference name="Hackers - Young Computer Experts have Broken into Computer Systems" contributor="Amna Altaf" document="School Boy Hacks into Citys Tram System" >
+  <excerpt>For the purpose of implementation of knowledge in real world.</excerpt>
+</document_reference>
+<document_reference name="Drivers must Identify End of Authority to Stop Trains" contributor="Amna Altaf" document="European Rail Traffic Management System - Signalling Principles" >
+  <excerpt>Drivers responsibility to identify end of authority.</excerpt>
+</document_reference>
+<document_reference name="Signallers must be Able to Correlate the Drivers Reported Position with a Track Location" contributor="Amna Altaf" document="European Rail Traffic Management System - Signalling Principles" >
+  <excerpt>Status of Track-side Systems available to Signalers.</excerpt>
+</document_reference>
+<document_reference name="Hazard of Drivers Misreading ERTMS Stop Markers" contributor="Amna Altaf" document="European Rail Traffic Management System - Signalling Principles" >
+  <excerpt>No mistakes should be made.</excerpt>
+</document_reference>
+<document_reference name="Aspect Sequences to Drivers" contributor="Amna Altaf" document="European Rail Traffic Management System - Signalling Principles" >
+  <excerpt>New applications of ERTMS with signals must provide compliant aspect sequences to drivers.</excerpt>
+</document_reference>
+<document_reference name="Signaller with a Means to Initiate the Cancellation of a Route" contributor="Amna Altaf" document="European Rail Traffic Management System - Signalling Principles" >
+  <excerpt>Signaller directives to train drivers.</excerpt>
+</document_reference>
+<document_reference name="Momentary Loss of Signal Detection" contributor="Amna Altaf" document="European Rail Traffic Management System - Signalling Control" >
+  <excerpt>May compromise Drivers Job.</excerpt>
+</document_reference>
+<document_reference name="Overseeing Safe Operation" contributor="Amna Altaf" document="European Rail Traffic Management System - Signalling Control" >
+  <excerpt>Signalers Job.</excerpt>
+</document_reference>
+<document_reference name="Route Setting" contributor="Amna Altaf" document="European Rail Traffic Management System - Signalling Control" >
+  <excerpt>Signallers job.</excerpt>
+</document_reference>
+<document_reference name="Efficient Regulation of Trains" contributor="Amna Altaf" document="European Rail Traffic Management System - Signalling Control" >
+  <excerpt>Signallers job.</excerpt>
+</document_reference>
+<document_reference name="Degraded Operation - Signaller Must Provide Permission for the Driver to Proceed" contributor="Amna Altaf" document="European Rail Traffic Management System - Signalling Control" >
+  <excerpt>Signaller directives to train drivers.</excerpt>
+</document_reference>
+<document_reference name="Signaller Authorising Trains to Move Following Recovery Due to System Failure" contributor="Amna Altaf" document="European Rail Traffic Management System - Signalling Control" >
+  <excerpt>After recovery.</excerpt>
+</document_reference>
+<document_reference name="Signaller Ensure The Line is Safe" contributor="Amna Altaf" document="European Rail Traffic Management System - Signalling Control" >
+  <excerpt>Signaler Ensure the line is safe.</excerpt>
+</document_reference>
+<document_reference name="Drivers Responsibility to Control Movement of Trains" contributor="Amna Altaf" document="European Rail Traffic Management System - Signalling Control" >
+  <excerpt>Drivers responsibility.</excerpt>
+</document_reference>
+<document_reference name="Signallers Authority to Advice Movement" contributor="Amna Altaf" document="European Rail Traffic Management System - Signalling Control" >
+  <excerpt>Signaller directives to train drivers.</excerpt>
+</document_reference>
+<document_reference name="Signallers Authority to Advise Maximum Speed" contributor="Amna Altaf" document="European Rail Traffic Management System - Signalling Control" >
+  <excerpt>Signaller directives to train drivers.</excerpt>
+</document_reference>
+<document_reference name="Signallers Authority to Inform Nature of Failure" contributor="Amna Altaf" document="European Rail Traffic Management System - Signalling Control" >
+  <excerpt>Signaller directives to train drivers.</excerpt>
+</document_reference>
+<document_reference name="Instruct the ERTMS Mode Required" contributor="Amna Altaf" document="European Rail Traffic Management System - Signalling Control" >
+  <excerpt>Signaller directives to train drivers.</excerpt>
+</document_reference>
+<document_reference name="Management of ERTMS Failures" contributor="Amna Altaf" document="European Rail Traffic Management System - Signalling Control" >
+  <excerpt>Signallers Job.</excerpt>
+</document_reference>
+<document_reference name=" Identify Faults that have the Potential for Significant Impact on Safety " contributor="Amna Altaf" document="European Rail Traffic Management System - Signalling Control" >
+  <excerpt>It is the Signallers job to identify the possibility of faults that may have safety implications.</excerpt>
+</document_reference>
+<document_reference name="Determination of Response for Faults" contributor="Amna Altaf" document="European Rail Traffic Management System - Signalling Control" >
+  <excerpt>Determination of responses for faults.</excerpt>
+</document_reference>
+<document_reference name="Safe and Efficient Management of Train Movements" contributor="Amna Altaf" document="European Rail Traffic Management System - Signalling Control" >
+  <excerpt>Signaller Job.</excerpt>
+</document_reference>
+<document_reference name=" Controls that if Used Incorrectly Could Lead to a Hazardous Event" contributor="Amna Altaf" document="European Rail Traffic Management System - Signalling Control" >
+  <excerpt>Minimize hazardous events.</excerpt>
+</document_reference>
+<document_reference name="Definite and Sustained Actions" contributor="Amna Altaf" document="European Rail Traffic Management System - Signalling Control" >
+  <excerpt>No room for mistakes.</excerpt>
+</document_reference>
+<document_reference name="Realise an Error Before the Action is Taken" contributor="Amna Altaf" document="European Rail Traffic Management System - Signalling Control" >
+  <excerpt>Be efficient and vigilant in job.</excerpt>
+</document_reference>
+<document_reference name="Close Barriers or Gates to Road Traffic" contributor="Amna Altaf" document="European Rail Traffic Management System - Signalling Control" >
+  <excerpt>It is Signalers job to monitor these gates at level crossings.</excerpt>
+</document_reference>
+<document_reference name="Messages Passed Between ERTMS Trackside Equipment and the ERTMS Onboard Equipment" contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>Alerts the Driver.</excerpt>
+</document_reference>
+<document_reference name="RBC - Computer based System that Generates Messages (Data Packets)" contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>RBC system used for ERTMS operations.</excerpt>
+</document_reference>
+<document_reference name="Data Packets Contains Information on Operations of Trains" contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>Information used by Drivers.</excerpt>
+</document_reference>
+<document_reference name="Messages Provide ERTMS Movement Authorities to Allow the Safe Movement of Trains" contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>MA allow safe movement of trains.</excerpt>
+</document_reference>
+<document_reference name="Messages Transmitted vis GSM-R" contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>Messages are transmitted vis GSM-R.</excerpt>
+</document_reference>
+<document_reference name="Balise Groups Enable the Train to Determine its Direction of Travel " contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>Balise groups enable the train to determine its direction of travel and orientation in relation to the balise group orientation (nominal or reverse).</excerpt>
+</document_reference>
+<document_reference name="Status of Trackside Systems for Incident Investigation" contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>For incident investigation.</excerpt>
+</document_reference>
+<document_reference name="ERTMS Stop Markers - Enable the Driver to a Specific ERTMS Stop Marker" contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>ERTMS Stop Markers.</excerpt>
+</document_reference>
+<document_reference name="Signallers Workstation - Enable the Signaller to Safely and Efficiently Monitor and Control Trains" contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>Safely and efficiently monitor the train movement.</excerpt>
+</document_reference>
+<document_reference name="Technicians Terminal - Real Time Fault Diagnosis and Rectification" contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>The technician's terminal must facilitate real time fault diagnosis and rectification, by continually monitoring the health of the ERTMS system and interfaces.</excerpt>
+</document_reference>
+<document_reference name="Driving Cab Connected to ERTMS Onboard Equipment" contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>Provides information to drivers during train driving.</excerpt>
+</document_reference>
+<document_reference name="European Vital Computer - Supervision of Driver and Train Movements" contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>Supervision of Driver and Train Movements.</excerpt>
+</document_reference>
+<document_reference name="ERTMS Driver Interface Machine Provides Means for Driver to Enter Data into the Onboard System" contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>Provides means for driver to enter data into the on-board system.</excerpt>
+</document_reference>
+<document_reference name="Displays actual train speed to Drivers" contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>ERTMS DMI - Displays actual train speed to drivers.</excerpt>
+</document_reference>
+<document_reference name="Displays Information About the Route" contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>ERTMS DMI - Displays information about the route to the driver.</excerpt>
+</document_reference>
+<document_reference name="Alerts the Driver to Changes in Supervision, Errors and other Warnings (ERTMS DMI)" contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>Alerts to train drivers by signallers.</excerpt>
+</document_reference>
+<document_reference name="Information to Drivers about Speed Limit, Position, Alerts" contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>Information available to drivers.</excerpt>
+</document_reference>
+<document_reference name="Planning Information Display to Drivers" contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>Signalers Job.</excerpt>
+</document_reference>
+<document_reference name="Text Messages Generated to Drivers" contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>During job.</excerpt>
+</document_reference>
+<document_reference name="Hazard of Driver Distraction through Text Messages" contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>Driver may be distracted due to these text messages.</excerpt>
+</document_reference>
+<document_reference name="Fault and Failure Indications to Drivers" contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>Signaller directives to train drivers.</excerpt>
+</document_reference>
+<document_reference name="Fault and Failure Impact on Train Operations" contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>Signallers job.</excerpt>
+</document_reference>
+<document_reference name="GSM-R Status and Traffic Information Recorded" contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>ERTMS Mobile Communications based Technology</excerpt>
+</document_reference>
+<document_reference name="Reliability and Availability of the ERTMS DMI to Drivers" contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>Drivers train regulation movements depend on it.</excerpt>
+</document_reference>
+<document_reference name="ERTMS Isolation Switch Visibility to Drivers" contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>Drivers authority.</excerpt>
+</document_reference>
+<document_reference name="ERTMS Isolation Switch Out of Reach from Drivers Seat" contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>Not required during normal / routine operations.</excerpt>
+</document_reference>
+<document_reference name="ERTMS Reset within Driving Cab" contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>Available to Driver.</excerpt>
+</document_reference>
+<document_reference name="Driver Advisory Information (Driver ID, Train Running Number etc) " contributor="Amna Altaf" document="European Rail Traffic Management System - System Architecture" >
+  <excerpt>Available to Drivers in driving cab.</excerpt>
+</document_reference>
+<document_reference name="Level 0 - No Supervisory Information Displayed on the ERTMS DMI" contributor="Amna Altaf" document="European Rail Traffic Management System - Application Levels" >
+  <excerpt>ERTMS Driver Interface Machine for providing alerts to drivers.</excerpt>
+</document_reference>
+<document_reference name="Level NTC - Safe Movement of the Train" contributor="Amna Altaf" document="European Rail Traffic Management System - Application Levels" >
+  <excerpt>Implementation of ERTMS to improve safety.</excerpt>
+</document_reference>
+<document_reference name="Level 1 - Overlay of Underlying Signalling System" contributor="Amna Altaf" document="European Rail Traffic Management System - Application Levels" >
+  <excerpt>ERTMS Level 1 implementation for train movement.</excerpt>
+</document_reference>
+<document_reference name="Signalling and Operation Management System" contributor="Amna Altaf" document="Principles of European Rail Traffic Management System" >
+  <excerpt>ERTMS is a signalling and operation management system.</excerpt>
+</document_reference>
+<document_reference name="European Train Control System for Automatic Train Protection" contributor="Amna Altaf" document="Principles of European Rail Traffic Management System" >
+  <excerpt>European Train Control System (ETCS) for automatic train protection.</excerpt>
+</document_reference>
+<document_reference name="Global System for Mobile Communications - Railway (GSM-R)" contributor="Amna Altaf" document="Principles of European Rail Traffic Management System" >
+  <excerpt>ERTMS Technology used by Signallers.</excerpt>
+</document_reference>
+<document_reference name="Lower Costs for Signalling Systems" contributor="Amna Altaf" document="Principles of European Rail Traffic Management System" >
+  <excerpt>Lower capital costs for signalling systems.</excerpt>
+</document_reference>
+<document_reference name="Optimised Network Capacity" contributor="Amna Altaf" document="Principles of European Rail Traffic Management System" >
+  <excerpt>ERTMS Goals.</excerpt>
+</document_reference>
+<document_reference name="System Design that Satisfies Immediate Needs of the Industry" contributor="Amna Altaf" document="Principles of European Rail Traffic Management System" >
+  <excerpt>ERTMS - A system design that satisfies the immediate needs of the industry.</excerpt>
+</document_reference>
+<document_reference name="ERTMS Operational Concept - Vision of How ERTMS Operates" contributor="Amna Altaf" document="Principles of European Rail Traffic Management System" >
+  <excerpt>Operational Concept.</excerpt>
+</document_reference>
+<document_reference name="Control, Command and Signalling Technical Specification for Interoperability" contributor="Amna Altaf" document="Principles of European Rail Traffic Management System" >
+  <excerpt>Drivers job.</excerpt>
+</document_reference>
+<document_reference name="Increase Network Capacity, Flexibility and Capability" contributor="Amna Altaf" document="Principles of European Rail Traffic Management System" >
+  <excerpt>ERTMS Goals.</excerpt>
+</document_reference>
+<document_reference name="Implementation of ERTMS to Improve Safety" contributor="Amna Altaf" document="Principles of European Rail Traffic Management System" >
+  <excerpt>Safety Goals.</excerpt>
+</document_reference>
+<document_reference name="Driver Observes a Signal at Danger Ahead" contributor="Amna Altaf" document="Principles of European Rail Traffic Management System" >
+  <excerpt>Signaller directives to train drivers.</excerpt>
+</document_reference>
+<document_reference name="Driver must Stop the Train Immediately " contributor="Amna Altaf" document="Principles of European Rail Traffic Management System" >
+  <excerpt>In case of any emergency.</excerpt>
+</document_reference>
+<document_reference name="Drivers must Maintain Vigilance and an Awareness of Events or Information" contributor="Amna Altaf" document="Principles of European Rail Traffic Management System" >
+  <excerpt>Active state of mind.</excerpt>
+</document_reference>
+<document_reference name="ERTMS must not Constrain Current Railway Capability" contributor="Amna Altaf" document="Principles of European Rail Traffic Management System" >
+  <excerpt>Must not disturb normal regulation of trains.</excerpt>
+</document_reference>
+<document_reference name="Designed, Maintained and Operated to Provide the Highest Level of Supervision" contributor="Amna Altaf" document="Principles of European Rail Traffic Management System" >
+  <excerpt>Signalers supervise train drivers.</excerpt>
+</document_reference>
+<document_reference name="Signalling Information Displayed on the ERTMS DMI must form part of the System Design" contributor="Amna Altaf" document="Principles of European Rail Traffic Management System" >
+  <excerpt>Role of ERTMS DMI for Drivers.</excerpt>
+</document_reference>
+<document_reference name="Signallers cannot make Signalling Control Decisions" contributor="Amna Altaf" document="Principles of European Rail Traffic Management System" >
+  <excerpt>Cannot make decisions by themselves.</excerpt>
+</document_reference>
+<document_reference name="ERTMS Movement Authority - Not Granted to Pass a Signal at Danger" contributor="Amna Altaf" document="Principles of European Rail Traffic Management System" >
+  <excerpt>Role of Movement Authority.</excerpt>
+</document_reference>
+<persona_characteristic persona="Adam " behavioural_variable="Activities" modal_qualifier="Therefore" >
+  <definition>IT Student with Good Academic Skills</definition>
+  <warrant type="document" reference="Described by His Teachers as an Electronics Genius" />
+  <warrant type="document" reference="Exemplary Student" />
+  <warrant type="document" reference="A Model Student - Playing with Trains" />
+</persona_characteristic>
+<persona_characteristic persona="Adam " behavioural_variable="Activities" modal_qualifier="Perhaps" >
+  <definition>Flickering Interest in Railways</definition>
+  <grounds type="document" reference="School Exercise Book About Junctions to Move Trams and Signals to Change" />
+  <warrant type="document" reference="Homemade Transmitter that Tripped Rail Switches and Redirected Trains" />
+  <warrant type="document" reference="Spent Months Studying the Citys Rail Lines" />
+  <warrant type="document" reference="Lodz Tram System into His Own Personal Train Set" />
+  <warrant type="document" reference="Hacked into The Train Network" />
+</persona_characteristic>
+<persona_characteristic persona="Adam " behavioural_variable="Activities" modal_qualifier="Perhaps" >
+  <definition>Leisure Time to Kill</definition>
+  <grounds type="document" reference="Studied the Trams and the Tracks for a Long Time" />
+  <warrant type="document" reference=" Learn the Coding" />
+  <warrant type="document" reference="Trespassed At Tram Depots to Gather Information " />
+  <warrant type="document" reference="Trespassed at the Tram Stations to Gather Equipment for Device" />
+  <warrant type="document" reference="Using Public Library and Open Source Information From The Internet" />
+</persona_characteristic>
+<persona_characteristic persona="Adam " behavioural_variable="Aptitudes" modal_qualifier="Perhaps" >
+  <definition>Involvement in Similar Activities - Previous Record</definition>
+  <grounds type="document" reference="Responsible For Several Other Recent Tram Derailments" />
+  <warrant type="document" reference="Involved in Several Similar Incidents" />
+</persona_characteristic>
+<persona_characteristic persona="Adam " behavioural_variable="Aptitudes" modal_qualifier="Perhaps" >
+  <definition>Implementation of Knowledge in New and Exciting Ways</definition>
+  <grounds type="document" reference="Used the Infrared Remote Control Device to Switch Tram Tracks " />
+  <grounds type="document" reference="Hacked into The Train Network" />
+</persona_characteristic>
+<persona_characteristic persona="Adam " behavioural_variable="Aptitudes" modal_qualifier="Perhaps" >
+  <definition>Charges of Endangering Public Safety</definition>
+  <grounds type="document" reference="Caused the Havoc" />
+  <warrant type="document" reference="Juvenile Court on Charges of Endangering Public Safety" />
+  <warrant type="document" reference="Police Arrested a Polish Teenager" />
+  <warrant type="document" reference="Search At The Suspects Home Turned Up The Device" />
+  <warrant type="document" reference="Sent to Detention Centre for Juvenile Delinquents." />
+</persona_characteristic>
+<persona_characteristic persona="Adam " behavioural_variable="Attitudes" modal_qualifier="Therefore" >
+  <definition>Non-serious Behavior as a Teenager</definition>
+  <grounds type="document" reference="Caused the Havoc" />
+  <grounds type="document" reference="Did Not Think About the Consequences of His Actions" />
+  <grounds type="document" reference="Did it as a Prank" />
+  <warrant type="document" reference="Responsible For Several Other Recent Tram Derailments" />
+  <warrant type="document" reference="Involved in Several Similar Incidents" />
+</persona_characteristic>
+<persona_characteristic persona="Adam " behavioural_variable="Attitudes" modal_qualifier="Perhaps" >
+  <definition>Exploitation of System Vulnerabilities</definition>
+  <grounds type="document" reference="Problems with the Signalling System on Lodzs Tram Network " />
+  <grounds type="document" reference="Maneuver the Trams and Change Track Points" />
+  <grounds type="document" reference="Disinterest in Improving Security by Railway Authorities" />
+  <warrant type="document" reference="Had to Make Emergency Stops" />
+  <warrant type="document" reference="Transport Staff Suspected Outside Interference" />
+  <warrant type="document" reference="Lodzs Tram Network was Hacked" />
+  <warrant type="document" reference="Workers Reported Security Gaps " />
+</persona_characteristic>
+<persona_characteristic persona="Adam " behavioural_variable="Attitudes" modal_qualifier="Therefore" >
+  <definition>Trespassing and Breaking of Rules</definition>
+  <grounds type="document" reference="Trespassed At Tram Depots to Gather Information " />
+  <grounds type="document" reference="Trespassed at the Tram Stations to Gather Equipment for Device" />
+  <warrant type="document" reference="Teenager Testified He Switched Tram Tracks Three Times" />
+</persona_characteristic>
+<persona_characteristic persona="Adam " behavioural_variable="Attitudes" modal_qualifier="Therefore" >
+  <definition>Lacks Financial Resources and Easily Accessible Equipment Used</definition>
+  <grounds type="document" reference="Exemplary Student" />
+  <grounds type="document" reference="Trespassed at the Tram Stations to Gather Equipment for Device" />
+  <warrant type="document" reference=" Learn the Coding" />
+  <warrant type="document" reference="Using Public Library and Open Source Information From The Internet" />
+</persona_characteristic>
+<persona_characteristic persona="Adam " behavioural_variable="Motivations" modal_qualifier="Probably" >
+  <definition>No Intent to Hurt People</definition>
+  <warrant type="document" reference="Did Not Think About the Consequences of His Actions" />
+  <warrant type="document" reference="Did it as a Prank" />
+</persona_characteristic>
+<persona_characteristic persona="Adam " behavioural_variable="Motivations" modal_qualifier="Perhaps" >
+  <definition>Out of Curiosity</definition>
+  <grounds type="document" reference="A Model Student - Playing with Trains" />
+  <warrant type="document" reference="Lodz Tram System into His Own Personal Train Set" />
+  <warrant type="document" reference="Looms The Vulnerabilities From Unseen Computer Hackers" />
+</persona_characteristic>
+<persona_characteristic persona="Adam " behavioural_variable="Motivations" modal_qualifier="Therefore" >
+  <definition>Wanted to Implement Knowledge in Real World</definition>
+  <grounds type="document" reference="Control Railway Junctions" />
+  <grounds type="document" reference="Maneuver the Trams and Change Track Points" />
+  <warrant type="document" reference="Hackers - Young Computer Experts have Broken into Computer Systems" />
+</persona_characteristic>
+<persona_characteristic persona="Adam " behavioural_variable="Motivations" modal_qualifier="Presumably" >
+  <definition>Did is as a Prank - Careless Behavior</definition>
+  <grounds type="document" reference="Prank that Derailed Four Trams" />
+  <grounds type="document" reference="Modified Track Settings for a Prank" />
+  <warrant type="document" reference=" Luckily Nobody was Killed" />
+  <warrant type="document" reference="Triggering Chaos and Derailing Four Vehicles" />
+</persona_characteristic>
+<persona_characteristic persona="Adam " behavioural_variable="Skills" modal_qualifier="Presumably" >
+  <definition>Experience Working with Small Electronics Projects</definition>
+  <grounds type="document" reference="Described by His Teachers as an Electronics Genius" />
+  <warrant type="document" reference="School Exercise Book About Junctions to Move Trams and Signals to Change" />
+</persona_characteristic>
+<persona_characteristic persona="Adam " behavioural_variable="Skills" modal_qualifier="Perhaps" >
+  <definition>Working Knowledge about Railways</definition>
+  <grounds type="document" reference="Studied the Trams and the Tracks for a Long Time" />
+  <grounds type="document" reference="Trespassed At Tram Depots to Gather Information " />
+  <warrant type="document" reference="Spent Months Studying the Citys Rail Lines" />
+</persona_characteristic>
+<persona_characteristic persona="Adam " behavioural_variable="Skills" modal_qualifier="Perhaps" >
+  <definition>Getting Information and Learning Skills from Internet</definition>
+  <grounds type="document" reference=" Learn the Coding" />
+  <warrant type="document" reference="Using Public Library and Open Source Information From The Internet" />
+</persona_characteristic>
+<persona_characteristic persona="Adam " behavioural_variable="Skills" modal_qualifier="Therefore" >
+  <definition>Develop Small Scale Infrared Remote Control</definition>
+  <grounds type="document" reference=" Learn the Coding" />
+  <grounds type="document" reference="Using Public Library and Open Source Information From The Internet" />
+  <warrant type="document" reference="Converted an Old TV Remote into an Infrared Transmitter " />
+  <warrant type="document" reference="Kid Reverse Engineered the IR Control Protocol" />
+</persona_characteristic>
+<persona_characteristic persona="Ben" behavioural_variable="Activities" modal_qualifier="Perhaps" >
+  <definition>Train Operational Control with ERTMS Drivers Machine Interface</definition>
+  <grounds type="document" reference="Displays actual train speed to Drivers" />
+  <grounds type="document" reference="Displays Information About the Route" />
+  <warrant type="document" reference="ERTMS Driver Interface Machine Provides Means for Driver to Enter Data into the Onboard System" />
+</persona_characteristic>
+<persona_characteristic persona="Ben" behavioural_variable="Activities" modal_qualifier="Perhaps" >
+  <definition>Drivers Responsibility to Control Accidents</definition>
+  <grounds type="document" reference="Driver must Stop the Train Immediately " />
+  <warrant type="document" reference="Driver Observes a Signal at Danger Ahead" />
+</persona_characteristic>
+<persona_characteristic persona="Ben" behavioural_variable="Activities" modal_qualifier="Perhaps" >
+  <definition>Drivers Authority to Reset in Special Circumstances</definition>
+  <grounds type="document" reference="ERTMS must not Constrain Current Railway Capability" />
+  <warrant type="document" reference="ERTMS Reset within Driving Cab" />
+</persona_characteristic>
+<persona_characteristic persona="Ben" behavioural_variable="Activities" modal_qualifier="Perhaps" >
+  <definition>Drivers Job to Switch to Isolation Mode</definition>
+  <grounds type="document" reference="ERTMS Isolation Switch Visibility to Drivers" />
+  <warrant type="document" reference="ERTMS Isolation Switch Out of Reach from Drivers Seat" />
+</persona_characteristic>
+<persona_characteristic persona="Ben" behavioural_variable="Activities" modal_qualifier="Therefore" >
+  <definition>Drivers Responsibility to Identify End of Authority</definition>
+  <grounds type="document" reference="Drivers Responsibility to Control Movement of Trains" />
+  <grounds type="document" reference="Control, Command and Signalling Technical Specification for Interoperability" />
+  <warrant type="document" reference="Drivers must Identify End of Authority to Stop Trains" />
+</persona_characteristic>
+<persona_characteristic persona="Ben" behavioural_variable="Activities" modal_qualifier="Therefore" >
+  <definition>Drivers Take Action According to Movement Authority</definition>
+  <grounds type="document" reference="ERTMS Operational Concept - Vision of How ERTMS Operates" />
+  <grounds type="document" reference="ERTMS Movement Authority - Not Granted to Pass a Signal at Danger" />
+  <warrant type="document" reference="Messages Provide ERTMS Movement Authorities to Allow the Safe Movement of Trains" />
+</persona_characteristic>
+<persona_characteristic persona="Ben" behavioural_variable="Aptitudes" modal_qualifier="Perhaps" >
+  <definition>Implementation of ERTMS Levels for Train Movement Control</definition>
+  <grounds type="document" reference="Level 2 - Radio Based System" />
+  <grounds type="document" reference="Level 1 - Overlay of Underlying Signalling System" />
+  <warrant type="document" reference="Level 0 - No Supervisory Information Displayed on the ERTMS DMI" />
+  <warrant type="document" reference="Level NTC - Safe Movement of the Train" />
+</persona_characteristic>
+<persona_characteristic persona="Ben" behavioural_variable="Aptitudes" modal_qualifier="Perhaps" >
+  <definition>Active State of Mind during Working Hours</definition>
+  <grounds type="document" reference="Drivers must Maintain Vigilance and an Awareness of Events or Information" />
+  <warrant type="document" reference="Drivers Responsibility to Control Movement of Trains" />
+</persona_characteristic>
+<persona_characteristic persona="Ben" behavioural_variable="Aptitudes" modal_qualifier="Perhaps" >
+  <definition>Drivers Ultimate Dependence on ERTMS DMI for Train Regulations</definition>
+  <grounds type="document" reference="Reliability and Availability of the ERTMS DMI to Drivers" />
+  <warrant type="document" reference="Signalling Information Displayed on the ERTMS DMI must form part of the System Design" />
+</persona_characteristic>
+<persona_characteristic persona="Ben" behavioural_variable="Aptitudes" modal_qualifier="Perhaps" >
+  <definition>Driver Distraction may lead to Hazards</definition>
+  <grounds type="document" reference="Text Messages Generated to Drivers" />
+  <warrant type="document" reference="Hazard of Driver Distraction through Text Messages" />
+</persona_characteristic>
+<persona_characteristic persona="Ben" behavioural_variable="Attitudes" modal_qualifier="Therefore" >
+  <definition>Takes Operational Control Decisions based on Information Displayed</definition>
+  <grounds type="document" reference="Information to Drivers about Speed Limit, Position, Alerts" />
+  <warrant type="document" reference="Alerts the Driver to Changes in Supervision, Errors and other Warnings (ERTMS DMI)" />
+</persona_characteristic>
+<persona_characteristic persona="Ben" behavioural_variable="Attitudes" modal_qualifier="Therefore" >
+  <definition>Takes Action based on Signallers Directives</definition>
+  <grounds type="document" reference="Signaller with a Means to Initiate the Cancellation of a Route" />
+  <grounds type="document" reference="Degraded Operation - Signaller Must Provide Permission for the Driver to Proceed" />
+  <grounds type="document" reference="Instruct the ERTMS Mode Required" />
+  <grounds type="document" reference="Fault and Failure Indications to Drivers" />
+  <grounds type="document" reference="Driver Observes a Signal at Danger Ahead" />
+  <warrant type="document" reference="Signallers Authority to Advice Movement" />
+  <warrant type="document" reference="Signallers Authority to Advise Maximum Speed" />
+  <warrant type="document" reference="Signallers Authority to Inform Nature of Failure" />
+</persona_characteristic>
+<persona_characteristic persona="Ben" behavioural_variable="Attitudes" modal_qualifier="Therefore" >
+  <definition>No Mistakes while Interpreting ERTMS Stop Markers</definition>
+  <grounds type="document" reference="ERTMS Stop Markers - Enable the Driver to a Specific ERTMS Stop Marker" />
+  <warrant type="document" reference="Hazard of Drivers Misreading ERTMS Stop Markers" />
+</persona_characteristic>
+<persona_characteristic persona="Ben" behavioural_variable="Attitudes" modal_qualifier="Perhaps" >
+  <definition>Loss of Signal Detection may Compromise Drivers Job</definition>
+  <grounds type="document" reference="Momentary Loss of Signal Detection" />
+  <grounds type="document" reference="RBC - Computer based System that Generates Messages (Data Packets)" />
+  <grounds type="document" reference="Messages Transmitted vis GSM-R" />
+  <warrant type="document" reference="Data Packets Contains Information on Operations of Trains" />
+</persona_characteristic>
+<persona_characteristic persona="Ben" behavioural_variable="Attitudes" modal_qualifier="Perhaps" >
+  <definition>ERTMS On-board Equipment Reveals Driver Advisory Information to Train Drivers</definition>
+  <grounds type="document" reference="Messages Passed Between ERTMS Trackside Equipment and the ERTMS Onboard Equipment" />
+  <grounds type="document" reference="Driving Cab Connected to ERTMS Onboard Equipment" />
+  <warrant type="document" reference="Driver Advisory Information (Driver ID, Train Running Number etc) " />
+</persona_characteristic>
+<persona_characteristic persona="Daniel" behavioural_variable="Activities" modal_qualifier="Perhaps" >
+  <definition>Responsible for Monitoring and Controlling the Train Movement</definition>
+  <grounds type="document" reference="Safe and Efficient Management of Train Movements" />
+  <warrant type="document" reference="Signallers Authority to Advice Movement" />
+  <warrant type="document" reference="Signallers Workstation - Enable the Signaller to Safely and Efficiently Monitor and Control Trains" />
+</persona_characteristic>
+<persona_characteristic persona="Daniel" behavioural_variable="Activities" modal_qualifier="Therefore" >
+  <definition>Makes Route Decisions for Train Movement</definition>
+  <grounds type="document" reference="Signaller with a Means to Initiate the Cancellation of a Route" />
+  <grounds type="document" reference="Signaller Ensure The Line is Safe" />
+  <warrant type="document" reference="Route Setting" />
+  <rebuttal type="document" reference="Signallers cannot make Signalling Control Decisions" />
+</persona_characteristic>
+<persona_characteristic persona="Daniel" behavioural_variable="Activities" modal_qualifier="Perhaps" >
+  <definition>Supervision of Driver and Train Movements</definition>
+  <grounds type="document" reference="Signallers must be Able to Correlate the Drivers Reported Position with a Track Location" />
+  <warrant type="document" reference="European Vital Computer - Supervision of Driver and Train Movements" />
+</persona_characteristic>
+<persona_characteristic persona="Daniel" behavioural_variable="Aptitudes" modal_qualifier="Therefore" >
+  <definition>Responsible for Faults Identification and ensures Safe Operations</definition>
+  <grounds type="document" reference="Overseeing Safe Operation" />
+  <warrant type="document" reference=" Identify Faults that have the Potential for Significant Impact on Safety " />
+</persona_characteristic>
+<persona_characteristic persona="Daniel" behavioural_variable="Aptitudes" modal_qualifier="Therefore" >
+  <definition>Impact and Response Determination for Faults and Failures</definition>
+  <grounds type="document" reference="Signaller Authorising Trains to Move Following Recovery Due to System Failure" />
+  <grounds type="document" reference="Signallers Authority to Inform Nature of Failure" />
+  <grounds type="document" reference="Management of ERTMS Failures" />
+  <warrant type="document" reference="Determination of Response for Faults" />
+  <warrant type="document" reference="Fault and Failure Impact on Train Operations" />
+</persona_characteristic>
+<persona_characteristic persona="Daniel" behavioural_variable="Aptitudes" modal_qualifier="Perhaps" >
+  <definition>Vigilance during Signalling Operations inorder to Avoid Hazards</definition>
+  <grounds type="document" reference="Efficient Regulation of Trains" />
+  <warrant type="document" reference=" Controls that if Used Incorrectly Could Lead to a Hazardous Event" />
+</persona_characteristic>
+<persona_characteristic persona="Daniel" behavioural_variable="Attitudes" modal_qualifier="Perhaps" >
+  <definition>Traffic Information for Incident Investigation</definition>
+  <grounds type="document" reference="GSM-R Status and Traffic Information Recorded" />
+  <warrant type="document" reference="Status of Trackside Systems for Incident Investigation" />
+</persona_characteristic>
+<persona_characteristic persona="Daniel" behavioural_variable="Attitudes" modal_qualifier="Hence" >
+  <definition>Signalers Job to Supervise Train Drivers</definition>
+  <grounds type="document" reference="Degraded Operation - Signaller Must Provide Permission for the Driver to Proceed" />
+  <grounds type="document" reference="Planning Information Display to Drivers" />
+  <warrant type="document" reference="Designed, Maintained and Operated to Provide the Highest Level of Supervision" />
+</persona_characteristic>
+<persona_characteristic persona="Daniel" behavioural_variable="Motivations" modal_qualifier="Therefore" >
+  <definition>Maximum Efforts to Minimize Hazardous Events</definition>
+  <grounds type="document" reference=" Controls that if Used Incorrectly Could Lead to a Hazardous Event" />
+  <grounds type="document" reference="Definite and Sustained Actions" />
+  <grounds type="document" reference="Close Barriers or Gates to Road Traffic" />
+  <warrant type="document" reference="Realise an Error Before the Action is Taken" />
+  <warrant type="document" reference="Implementation of ERTMS to Improve Safety" />
+</persona_characteristic>
+<persona_characteristic persona="Daniel" behavioural_variable="Motivations" modal_qualifier="Therefore" >
+  <definition>Advise Train Drivers on Train Movement</definition>
+  <grounds type="document" reference="Alerts the Driver to Changes in Supervision, Errors and other Warnings (ERTMS DMI)" />
+  <grounds type="document" reference="Signalling Information Displayed on the ERTMS DMI must form part of the System Design" />
+  <warrant type="document" reference="Signallers Authority to Advice Movement" />
+  <warrant type="document" reference="Signallers Authority to Advise Maximum Speed" />
+  <warrant type="document" reference="Instruct the ERTMS Mode Required" />
+</persona_characteristic>
+<persona_characteristic persona="Daniel" behavioural_variable="Motivations" modal_qualifier="Hence" >
+  <definition>Signalling and Operation Management System for Train Movements</definition>
+  <grounds type="document" reference="Overseeing Safe Operation" />
+  <grounds type="document" reference="Global System for Mobile Communications - Railway (GSM-R)" />
+  <grounds type="document" reference="Control, Command and Signalling Technical Specification for Interoperability" />
+  <warrant type="document" reference="Optimised Network Capacity" />
+  <warrant type="document" reference="Increase Network Capacity, Flexibility and Capability" />
+</persona_characteristic>
+<task name="Building an Infrared Device" code="Remote" author="Polish Tram Incident" assumption_task="FALSE" >
+  <objective>The attacker built an infrared device that looked like a TV remote control that was able to control the railway junctions on the line.  </objective>
+  <task_environment name="Morning Shift" >
+    <dependencies>Gather information from open-source public libraries internet and learn the skills from Electronics class.</dependencies>
+    <task_persona persona="Adam " duration="Minutes" frequency="Hourly_or_more" demands="Low" goal_conflict="Low" />
+    <task_concern asset="Infrared Remote Control" />
+    <narrative>The attacker was capable of building a universal IR remote control through which he was able to record signals sent in one place to a set of points and replay the signal back to get some result in another location. The simple concept of replay attacks was used to get in to the tram network system. </narrative>
+    <consequences>Four trams were derailed. Twelve people were injured when a train derailed. </consequences>
+    <benefits>Able to control the railway junctions</benefits>
+  </task_environment>
+</task>
+<task name="Switch Track Points" code="Switch Signals" author="Polish Tram Incident" assumption_task="FALSE" >
+  <objective>He switched direction when the tram was in a middle of the points - i.e. front part drove in one direction, aft part in the other, which caused derailment.</objective>
+  <task_environment name="Morning Shift" >
+    <dependencies>Built an infrared device by which he was able to switch control signals of trams.</dependencies>
+    <task_persona persona="Adam " duration="Minutes" frequency="Hourly_or_more" demands="Low" goal_conflict="Low" />
+    <narrative>The boy built an infrared device that looked like a TV remote control that could control all the junctions on the line. He switched direction when the tram was in a middle of the points - i.e. front part drove in one direction, aft part in the other, which caused derailment.</narrative>
+    <consequences>Four trams were derailed. Twelve people were injured when a train derailed. No deaths occurred.</consequences>
+    <benefits>Application of knowledge.</benefits>
+  </task_environment>
+</task>
+<task name="Issue ERTMS Movement Authority" code="MA" author="ERTMS" assumption_task="FALSE" >
+  <objective>The normal method of signalling for a fitted train operating with an ERTMS Movement Authority.</objective>
+  <task_environment name="Morning Shift" >
+    <dependencies>Via the ERTMS Driver Machine Interface.</dependencies>
+    <task_persona persona="Daniel" duration="Hours_or_longer" frequency="Hourly_or_more" demands="High" goal_conflict="Medium" />
+    <narrative>The normal method of signalling for a fitted train operating with an ERTMS movement authority (MA) must be via the ERTMS Driver Machine Interface (DMI).</narrative>
+    <consequences>The implementation of ERTMS must be designed, maintained and operated to provide the highest level of supervision practicable considering the safety and operational requirements for the type of operation being undertaken.
+In normal operation, the implementation and operation of ERTMS must not constrain current railway capability, or impose any additional performance constraints on the timetable or on other train movements and, where reasonably practicable, should improve performance, compared with the current method of operation.</consequences>
+    <benefits>The implementation of ERTMS should seek to exploit opportunities to improve safety on the railways.</benefits>
+  </task_environment>
+</task>
+<task name="Change in Regulation" code="" author="ERTMS" assumption_task="FALSE" >
+  <objective>Any change in regulation must be done in a manner so that it does not cause a train to brake immediately.</objective>
+  <task_environment name="Morning Shift" >
+    <dependencies>The signaller must be provided with a means to initiate the cancellation of a route.</dependencies>
+    <task_persona persona="Daniel" duration="Seconds" frequency="Hourly_or_more" demands="Low" goal_conflict="Low" />
+    <narrative>For ERTMS without signals lines this could use a handshake between RBC and interlocking such that the interlocking knows when any movement authority into the route has been known (beyond reasonable doubt) to be revoked.
+The cooperative shortening function can be used to enable the signaller to regulate an ERTMS fitted train with an ERTMS MA.</narrative>
+    <consequences>The conventional rules for changing the regulation must continue to be applied.</consequences>
+    <benefits>Any change in regulation must be done in a manner so that it does not cause a train to brake immediately.</benefits>
+  </task_environment>
+</task>
+<task name="Efficient Regulation of Trains" code="" author="ERTMS" assumption_task="FALSE" >
+  <objective>The signaller must be provided with information and controls that support the safe and efficient management of train movements in their area of control.</objective>
+  <task_environment name="Morning Shift" >
+    <dependencies>None.</dependencies>
+    <task_persona persona="Daniel" duration="Hours_or_longer" frequency="Hourly_or_more" demands="Low" goal_conflict="Low" />
+    <narrative>In normal operation, the role of the signaller in an ERTMS area is unlikely to change and will continue to include overseeing safe operation, route setting and the efficient regulation of trains.</narrative>
+    <consequences>None.</consequences>
+    <benefits>In degraded operation, when it is not possible for an ERTMS MA to be issued to a train which is required to move, the signaller must provide permission for the driver to proceed.</benefits>
+  </task_environment>
+</task>
+<task name="Safer Extent of Train Movement" code="" author="ERTMS" assumption_task="FALSE" >
+  <objective>Before providing permission to proceed, the signaller must make sure that the line is safe for the extent of the movement.</objective>
+  <task_environment name="Morning Shift" >
+    <dependencies>None.</dependencies>
+    <task_persona persona="Daniel" duration="Seconds" frequency="Hourly_or_more" demands="Low" goal_conflict="Low" />
+    <narrative>This includes authorising trains to move following recovery from an ERTMS system failure or transition to TR, or to pass an EoA in the event that an ERTMS MA cannot be issued.</narrative>
+    <consequences>Making sure the portion of line concerned is clear and safe for the movement.
+The barriers or gates at any interlocked level crossings are closed to road traffic.
+Facing points are in the required position for the move and will not move; trailing points are in the required position and will not move.
+Any ground-frame release giving access to the route is 'normal' unless it is to be operated for the movement.</consequences>
+    <benefits>When providing permission to proceed, the signaller's authority is limited to advising the extent of movement, maximum speeds and other information relevant to the nature of the failure and move; it may also be appropriate to instruct the ERTMS mode required.</benefits>
+  </task_environment>
+</task>
+<task name="Logging Signalling Control Center System Failures" code="" author="ERTMS" assumption_task="FALSE" >
+  <objective>The fault reporting system must be able to provide information on trackside failures with the ability to identify faults that have the potential for significant impact on safety or performance of the railway.</objective>
+  <task_environment name="Morning Shift" >
+    <dependencies>Trackside failure information must be simple to interpret, unambiguous, and standardised across the network, to facilitate ease of fault reporting and determination of response.</dependencies>
+    <task_persona persona="Daniel" duration="Hours_or_longer" frequency="Monthly_or_less" demands="Low" goal_conflict="Low" />
+    <narrative>The fault reporting system must be able to provide information on trackside failures with the ability to identify faults that have the potential for significant impact on safety or performance of the railway.</narrative>
+    <consequences>A suitable system for reporting and logging signalling control centre system failures and anomalies must be provided.</consequences>
+    <benefits>None.</benefits>
+  </task_environment>
+</task>
+<task name="Learn Coding Skills" code="Coding" author="Polish Tram Incident" assumption_task="FALSE" >
+  <objective>The attacker needed to learn the coding skills required to built an infrared remote control, to conduct the attack by exploitation of railway network vulnerabilities.</objective>
+  <task_environment name="Morning Shift" >
+    <dependencies>Gather information from internet and skills learned during Electronics class.</dependencies>
+    <task_persona persona="Adam " duration="Hours_or_longer" frequency="Daily_-_Weekly" demands="Low" goal_conflict="Low" />
+    <narrative>The attacker learned the coding from open-source public libraries on internet and copied the codes required to modify a TV remote control.</narrative>
+    <consequences>Railway network was hacked and he was able to switch tram track points. As a result of which four trams were derailed.</consequences>
+    <benefits>Additional coding skills.</benefits>
+  </task_environment>
+</task>
+<task name="Record Signals and Replay" code="Replay Attack" author="Polish Tram Incident" assumption_task="FALSE" >
+  <objective>The attacker was capable of building a universal IR remote control through which he was able to record signals sent in one place to a set of points and replay the signal back to get some result in another location. </objective>
+  <task_environment name="Morning Shift" >
+    <dependencies>There was no need to learn the encoding types. Instead he just modified a TV remote control and used it to record signals.</dependencies>
+    <task_persona persona="Adam " duration="Minutes" frequency="Hourly_or_more" demands="Low" goal_conflict="Low" />
+    <narrative>The simple concept of replay attacks was used to get in to the tram network system. Many of the universal remote controls have a learning mode, where you hold them in front of the original remote control, and it receives and stores the signal from the original, to be replayed when the corresponding button is pressed. </narrative>
+    <consequences>Four trams were derailed.</consequences>
+    <benefits>Application of knowledge.</benefits>
+  </task_environment>
+</task>
+<task name="Switch ERTMS Operation Levels" code="ERTMS Levels" author="ERTMS" assumption_task="FALSE" >
+  <objective>The train driver is responsible for switching between the ERTMS operation levels.</objective>
+  <task_environment name="Morning Shift" >
+    <dependencies></dependencies>
+    <task_persona persona="Ben" duration="Hours_or_longer" frequency="Daily_-_Weekly" demands="Medium" goal_conflict="Medium" />
+    <task_concern asset="ERTMS Driver Machine Interface" />
+    <narrative>The train driver based on directives from signaler is responsible for switching between different ERTMS levels.</narrative>
+    <consequences></consequences>
+    <benefits></benefits>
+  </task_environment>
+</task>
+<task name="Drive through ERTMS Driver Machine Interface" code="DMI" author="ERTMS" assumption_task="FALSE" >
+  <objective>The train drivers are responsible for managing the train movements based on directives given on driver machine interface.</objective>
+  <task_environment name="Morning Shift" >
+    <dependencies></dependencies>
+    <task_persona persona="Ben" duration="Hours_or_longer" frequency="Daily_-_Weekly" demands="High" goal_conflict="Medium" />
+    <narrative></narrative>
+    <consequences></consequences>
+    <benefits></benefits>
+  </task_environment>
+</task>
+<task name="Signal Directives from Signaler" code="Signal Directives" author="ERTMS" assumption_task="FALSE" >
+  <objective>The train drivers operate based on directives from signaler.</objective>
+  <task_environment name="Morning Shift" >
+    <dependencies></dependencies>
+    <task_persona persona="Ben" duration="Hours_or_longer" frequency="Daily_-_Weekly" demands="Medium" goal_conflict="Medium" />
+    <narrative></narrative>
+    <consequences></consequences>
+    <benefits></benefits>
+  </task_environment>
+</task>
+</usability>
+
+<goals>
+<goal name="Route Setting and Movement Authorities" originator="ERTMS">
+  <goal_environment name="Morning Shift" category="Achieve" priority="High" >
+    <definition>Once the route is requested and open, the appropriate ERTMS Movement Authority (MA) will be sent to a train providing that any other relevant conditions are met.</definition>
+    <fit_criterion>None.</fit_criterion>
+    <issue>Other relevant conditions include:
+The ERTMS operating mode of the train.
+The status of the ERTMS onboard train position.
+The type of route set.
+</issue>
+  </goal_environment>
+</goal>
+<goal name="ERTMS Operating Mode of Train" originator="ERTMS">
+  <goal_environment name="Morning Shift" category="Maintain" priority="Low" >
+    <definition>The ERTMS operating mode of the train.</definition>
+    <fit_criterion>None.</fit_criterion>
+    <issue>None.</issue>
+  </goal_environment>
+</goal>
+<goal name="Status of Onboard Train Position" originator="ERTMS">
+  <goal_environment name="Morning Shift" category="Maintain" priority="Low" >
+    <definition>The status of the ERTMS onboard train position.</definition>
+    <fit_criterion>None.</fit_criterion>
+    <issue>None.</issue>
+  </goal_environment>
+</goal>
+<goal name="Type of Route Set" originator="ERTMS">
+  <goal_environment name="Morning Shift" category="Maintain" priority="Low" >
+    <definition>The type of route set.</definition>
+    <fit_criterion>None.</fit_criterion>
+    <issue>None.</issue>
+  </goal_environment>
+</goal>
+<goal name="Marking an End of Authority" originator="ERTMS">
+  <goal_environment name="Morning Shift" category="Achieve" priority="Low" >
+    <definition>In railways transport system there are several locations which need to be marked as End of Authority (EoA).</definition>
+    <fit_criterion>None.</fit_criterion>
+    <issue>The minimum requirements for marking locations designated as EoA are:
+EoAs that protect a fouling point must be marked at the lineside to provide a marked location from which an authority for a train to go beyond the fouling point can be given.
+EoAs that have associated release speeds must be marked at the lineside to provide a stop location for a driver.
+EoAs must be marked to provide reasonable capacity during degraded mode operations (in degraded operation, capacity is constrained to a maximum of one train between each ERTMS stop marker or signal).</issue>
+  </goal_environment>
+</goal>
+<goal name="Protection of Fouling Points" originator="ERTMS">
+  <goal_environment name="Morning Shift" category="Maintain" priority="Low" >
+    <definition>EoAs that protect a fouling point must be marked at the lineside to provide a marked location from which an authority for a train to go beyond the fouling point can be given.</definition>
+    <fit_criterion>None</fit_criterion>
+    <issue>None.</issue>
+  </goal_environment>
+</goal>
+<goal name="End of Authority with Associated Release Speeds" originator="ERTMS">
+  <goal_environment name="Morning Shift" category="Maintain" priority="Low" >
+    <definition>EoAs that have associated release speeds must be marked at the lineside to provide a stop location for a driver.</definition>
+    <fit_criterion>None.</fit_criterion>
+    <issue>None.</issue>
+  </goal_environment>
+</goal>
+<goal name="End of Authority for Degraded Mode Operations" originator="ERTMS">
+  <goal_environment name="Morning Shift" category="Maintain" priority="Low" >
+    <definition>EoAs must be marked to provide reasonable capacity during degraded mode operations (in degraded operation, capacity is constrained to a maximum of one train between each ERTMS stop marker or signal).</definition>
+    <fit_criterion>None.</fit_criterion>
+    <issue>None.</issue>
+  </goal_environment>
+</goal>
+<goal name="ERTMS Signalling Operations" originator="ERTMS">
+  <goal_environment name="Morning Shift" category="Achieve" priority="High" >
+    <definition>ERTMS Signalling Principles comprise of s set of sub-goals like Train Route Setting, Movement Authorities, Marking an End of Authority etc.</definition>
+    <fit_criterion>None.</fit_criterion>
+    <issue>ERTMS Signalling Principles must be fulfilled without a failure to ensure normal functionality of the system.</issue>
+  </goal_environment>
+</goal>
+<goal name="Divergence between Lineside Signal and ERTMS Information" originator="ERTMS">
+  <goal_environment name="Morning Shift" category="Achieve" priority="Medium" >
+    <definition>ERTMS must be designed and implemented to minimise the duration of divergent signalling indications. Any residual divergence must be managed.</definition>
+    <fit_criterion>None.</fit_criterion>
+    <issue>Information on the ERTMS DMI can diverge from that available at the lineside, even under normal operating conditions. The integrity of the signalled route is unaffected, because this is controlled by the interlocking for both lineside signals (where fitted) and ERTMS MAs.</issue>
+  </goal_environment>
+</goal>
+<goal name="ERTMS Intermediate Block Sections" originator="ERTMS">
+  <goal_environment name="Morning Shift" category="Maintain" priority="Medium" >
+    <definition>On ERTMS with signals implementations, where there are more signalling sections available for trains operating with an ERTMS MA than for a conventionally signalled train, these shorter sections are referred to as 'ERTMS intermediate block sections'.</definition>
+    <fit_criterion>None.</fit_criterion>
+    <issue>ERTMS intermediate block sections provide an opportunity to increase the performance and/or capacity of an ERTMS with signals line for fitted trains when compared to conventional signalling sections.</issue>
+  </goal_environment>
+</goal>
+<goal name="Approach Locking" originator="ERTMS">
+  <goal_environment name="Morning Shift" category="Achieve" priority="Medium" >
+    <definition>A route must be approach locked before a MA can be issued.</definition>
+    <fit_criterion>None.</fit_criterion>
+    <issue>Where instead of a movement authority permission to proceed is granted, ideally approach locking should be applied.</issue>
+  </goal_environment>
+</goal>
+<goal name="Approach Locking Application" originator="ERTMS">
+  <goal_environment name="Morning Shift" category="Maintain" priority="Low" >
+    <definition>Where instead of a movement authority permission to proceed is granted, ideally approach locking should be applied.</definition>
+    <fit_criterion>None.</fit_criterion>
+    <issue>A route must be approach locked before a MA can be issued.</issue>
+  </goal_environment>
+</goal>
+<goal name="Approach Locking Release" originator="ERTMS">
+  <goal_environment name="Morning Shift" category="Maintain" priority="Low" >
+    <definition>Assurance has been obtained that the train that held an ERTMS MA for the route has entered the route.
+Assurance has been obtained that any approaching train can or has stopped on the approach to the route and the train has no ERTMS MA for the remainder of the route.</definition>
+    <fit_criterion>None.</fit_criterion>
+    <issue>None.</issue>
+  </goal_environment>
+</goal>
+<goal name="Route Locking" originator="ERTMS">
+  <goal_environment name="Morning Shift" category="Maintain" priority="Medium" >
+    <definition>Route locking must be applied once the route has been set.</definition>
+    <fit_criterion>None.</fit_criterion>
+    <issue>few things to be considered:
+Route Locking Application,
+Route Locking Release Initiation,
+Route Release Failure Management,
+Sectional Route Locking.</issue>
+  </goal_environment>
+</goal>
+<goal name="Route Locking Application" originator="ERTMS">
+  <goal_environment name="Morning Shift" category="Maintain" priority="Low" >
+    <definition>Route locking must be applied once the route has been set.</definition>
+    <fit_criterion>None.</fit_criterion>
+    <issue>None.</issue>
+  </goal_environment>
+</goal>
+<goal name="Route Locking Release Initiation" originator="ERTMS">
+  <goal_environment name="Morning Shift" category="Maintain" priority="Low" >
+    <definition>The signaller cancelling the route or Train Operated Route Release (TORR) conditions being satisfied.</definition>
+    <fit_criterion>None.</fit_criterion>
+    <issue>Route locking release can only occur once approach locking is released.</issue>
+  </goal_environment>
+</goal>
+<goal name="Route Release Failure Management" originator="ERTMS">
+  <goal_environment name="Morning Shift" category="Maintain" priority="Low" >
+    <definition>Functionality must be provided to enable the release of a route during all credible ERTMS failure conditions.</definition>
+    <fit_criterion>None.</fit_criterion>
+    <issue>If the ERTMS MA forms part of the route locking, there may be failure situations where the ERTMS MA locking element cannot be released automatically and an alternative means to force route release in a safe and controlled manner should be provided.</issue>
+  </goal_environment>
+</goal>
+<goal name="Sectional Route Locking" originator="ERTMS">
+  <goal_environment name="Morning Shift" category="Maintain" priority="Low" >
+    <definition>Sectional route locking release must be provided to allow a new route to be set from a route setting point in rear as soon as possible that is, the full route does not remain locked until the train has stopped at the EoA or passed into the next route.</definition>
+    <fit_criterion>None.</fit_criterion>
+    <issue>When the train enters the route, sectional route locking must be maintained in front of the train for the remainder of the route.</issue>
+  </goal_environment>
+</goal>
+<goal name="Loss of Signal Proving" originator="ERTMS">
+  <goal_environment name="Morning Shift" category="Maintain" priority="Medium" >
+    <definition>Operationally, the period must be long enough to filter out erroneous loss of proving events, but short enough so that &quot;ignoring&quot; an actual loss of proving for the period does not introduce any unacceptable risk.</definition>
+    <fit_criterion>None.</fit_criterion>
+    <issue>There must be no operational impact from the consequences of timing differences between the reported position of the train and the detected position of the train.</issue>
+  </goal_environment>
+</goal>
+<goal name="Movement Authority Timers" originator="ERTMS">
+  <goal_environment name="Morning Shift" category="Maintain" priority="High" >
+    <definition>There are a number of timers (section, overlap, LoA) associated with Movement Authorities.</definition>
+    <fit_criterion>None.</fit_criterion>
+    <issue>Suitable values must be established by the IM on a scheme specific basis.</issue>
+  </goal_environment>
+</goal>
+<goal name="Change of Route or Regulation" originator="ERTMS">
+  <goal_environment name="Morning Shift" category="Maintain" priority="Medium" >
+    <definition>Any change in regulation must be done in a manner so that it does not cause a train to brake immediately.</definition>
+    <fit_criterion>None.</fit_criterion>
+    <issue>The signaller must be provided with a means to initiate the cancellation of a route.</issue>
+  </goal_environment>
+</goal>
+<goal name="Flank Protection" originator="ERTMS">
+  <goal_environment name="Morning Shift" category="Maintain" priority="Medium" >
+    <definition>Because ERTMS provides speed and distance supervision, the risk of overrun is expected to be reduced, therefore the need for flank protection for trains operating with an ERTMS MA might be reduced, possibly to nil.</definition>
+    <fit_criterion>None.</fit_criterion>
+    <issue>Various factors may influence the risk of overrun, including trains operating without an ERTMS MA or where the supervision provided by ERTMS is not providing the necessary protection, for example in low rail adhesion areas, or when incorrect train data is utilised by the ERTMS onboard equipment.
+A risk assessment must therefore determine the control measures required to manage overrun risk for all trains on a site-by-site basis.</issue>
+  </goal_environment>
+</goal>
+<goal name="Interlocking Overlaps" originator="ERTMS">
+  <goal_environment name="Morning Shift" category="Maintain" priority="Medium" >
+    <definition>The implementation of ERTMS must not increase the timed release of the interlocking overlaps.</definition>
+    <fit_criterion>None.</fit_criterion>
+    <issue>The swinging of an overlap must not result in any of the following:
+An onboard warning or intervention.
+A loss of proving
+An unsafe discrepancy between the ERTMS onboard supervised location and the track section locked by the interlocking.
+A driver believing that an ERTMS MA has been extended.</issue>
+  </goal_environment>
+</goal>
+<goal name="Local Point Release" originator="ERTMS">
+  <goal_environment name="Morning Shift" category="Maintain" priority="Medium" >
+    <definition>Locally released points must be proved normal and locked before any ERTMS MA over them can be issued.</definition>
+    <fit_criterion>None.</fit_criterion>
+    <issue>Local points release arrangements must only be permitted when no movement with an ERTMS MA can be made that conflicts with any movement that may be made by the operator requesting the release.</issue>
+  </goal_environment>
+</goal>
+<goal name="Bi-Directional Running" originator="ERTMS">
+  <goal_environment name="Morning Shift" category="Maintain" priority="Low" >
+    <definition>The implementation of ERTMS must support the capability for bi-directional running to facilitate operations during, and recovery from, perturbation, and track access.</definition>
+    <fit_criterion>None.</fit_criterion>
+    <issue>The provision of bi-directional capability will still require appropriate signalling controls, and dedicated "wrong direction" balises supported by validated RBC data, including gradient and speed profiles.
+To support the operational need, it may not be financially viable, or indeed necessary, to provide full bi-directional capability on all lines.</issue>
+  </goal_environment>
+</goal>
+<goal name="Modify TV Remote Control" originator="Polish Tram Incident">
+  <goal_environment name="Morning Shift" category="Improve" priority="High" >
+    <definition>The attacker wants to modify a TV remote control and use it to conduct the attack on Railway Network System</definition>
+    <fit_criterion>Get the knowledge to build this device</fit_criterion>
+    <issue></issue>
+    <concern name="Open Source Public Libraries" />
+    <concern name="Internet Codes" />
+    <concern name="Infrared Remote Control" />
+  </goal_environment>
+</goal>
+<goal name="Access Railway Network" originator="Polish Tram Incident">
+  <goal_environment name="Morning Shift" category="Achieve" priority="High" >
+    <definition>The attacker wants to access the Railway Network System.</definition>
+    <fit_criterion>Use a modified TV remote control to get into network.</fit_criterion>
+    <issue>Needs to learn coding skills from internet.</issue>
+    <concern name="GSM-R Railway Network" />
+    <concern name="GSM-R Data Packets" />
+    <concern name="Movement Authority Signals" />
+    <concern name="Route Settings Information" />
+    <concern name="Train Route Information" />
+    <concern name="Driver Advisory Information" />
+    <concern name="ERTMS Signalling Control System" />
+  </goal_environment>
+</goal>
+<goal name="Redirect Railway Trams" originator="Polish Tram Incident">
+  <goal_environment name="Morning Shift" category="Maximise" priority="High" >
+    <definition>The attacker wants to get into railway network in order to re-direct trams.</definition>
+    <fit_criterion>Modify TV remote and get into network.</fit_criterion>
+    <issue>Get information and coding skills from internet.</issue>
+    <concern name="Road Traffic" />
+    <concern name="Railway Passengers" />
+    <concern name="Railway Staff" />
+    <concern name="Train Drivers" />
+  </goal_environment>
+</goal>
+<obstacle name="Onboard Warning or Intervention" originator="ERTMS" >
+  <obstacle_environment name="Morning Shift" category="Vulnerability" >
+    <definition>The swinging of an overlap must not result beacuse of an onboard warning or intervention.</definition>
+    <probability value="0" >
+      <rationale>None</rationale>
+    </probability>
+  </obstacle_environment>
+</obstacle>
+<obstacle name="Loss of Proving" originator="ERTMS" >
+  <obstacle_environment name="Morning Shift" category="Vulnerability" >
+    <definition>The swinging of an overlap must not result due to a loss of proving.</definition>
+    <probability value="0" >
+      <rationale>None</rationale>
+    </probability>
+  </obstacle_environment>
+</obstacle>
+<obstacle name="Unsafe Discrepancy" originator="ERTMS" >
+  <obstacle_environment name="Morning Shift" category="Vulnerability" >
+    <definition>An unsafe discrepancy between the ERTMS onboard supervised location and the track section locked by the interlocking whch may lead to an overlap.</definition>
+    <probability value="0" >
+      <rationale>None</rationale>
+    </probability>
+  </obstacle_environment>
+</obstacle>
+<obstacle name="Driver Misconception" originator="ERTMS" >
+  <obstacle_environment name="Morning Shift" category="Vulnerability" >
+    <definition>A driver believing that an ERTMS MA has been extended which may cause an overlap.</definition>
+    <probability value="0" >
+      <rationale>None</rationale>
+    </probability>
+  </obstacle_environment>
+</obstacle>
+<obstacle name="Un-reliable Open Source Data" originator="Polish Tram Incident" >
+  <obstacle_environment name="Morning Shift" category="Integrity_Threat" >
+    <definition>The attacker relies on getting information from open-source data on internet.</definition>
+    <concern name="Open Source Public Libraries" />
+    <concern name="Internet Codes" />
+    <probability value="3" >
+      <rationale>Data is unverifiable</rationale>
+    </probability>
+  </obstacle_environment>
+</obstacle>
+<obstacle name="Advance Train Control Protocal System" originator="Polish Tram Incident" >
+  <obstacle_environment name="Morning Shift" category="Threat" >
+    <definition>Network Access Denied due to ATCPS.</definition>
+    <concern name="GSM-R Railway Network" />
+    <probability value="5" >
+      <rationale>Implementation of Access Protocol</rationale>
+    </probability>
+  </obstacle_environment>
+</obstacle>
+</goals>
+
+<associations>
+<goal_association environment="Morning Shift"  goal_name="ERTMS Signalling Operations" goal_dim="goal" ref_type="and" subgoal_name="Route Setting and Movement Authorities" subgoal_dim="goal" alternative_id="0" >
+  <rationale>Once the route is requested and open, the appropriate ERTMS MA will be sent to a train as part of signalling operations.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Route Setting and Movement Authorities" goal_dim="goal" ref_type="and" subgoal_name="ERTMS Operating Mode of Train" subgoal_dim="goal" alternative_id="0" >
+  <rationale>The ERTMS operating mode of the train need to be known.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Route Setting and Movement Authorities" goal_dim="goal" ref_type="and" subgoal_name="Status of Onboard Train Position" subgoal_dim="goal" alternative_id="0" >
+  <rationale>The status of the ERTMS onboard train position need to be known.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Route Setting and Movement Authorities" goal_dim="goal" ref_type="and" subgoal_name="Type of Route Set" subgoal_dim="goal" alternative_id="0" >
+  <rationale>The type of route set need to be known.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="ERTMS Signalling Operations" goal_dim="goal" ref_type="and" subgoal_name="Marking an End of Authority" subgoal_dim="goal" alternative_id="0" >
+  <rationale>Marking an End of Authority comes under the signalling operations.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Marking an End of Authority" goal_dim="goal" ref_type="and" subgoal_name="Protection of Fouling Points" subgoal_dim="goal" alternative_id="0" >
+  <rationale>EoAs that protect a fouling point must be marked at the lineside to provide a marked location from which an authority for a train to go beyond the fouling point can be given.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Marking an End of Authority" goal_dim="goal" ref_type="and" subgoal_name="End of Authority with Associated Release Speeds" subgoal_dim="goal" alternative_id="0" >
+  <rationale>EoAs that have associated release speeds must be marked at the lineside to provide a stop location for a driver.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Marking an End of Authority" goal_dim="goal" ref_type="and" subgoal_name="End of Authority for Degraded Mode Operations" subgoal_dim="goal" alternative_id="0" >
+  <rationale>EoAs must be marked to provide reasonable capacity during degraded mode operations.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="ERTMS Signalling Operations" goal_dim="goal" ref_type="and" subgoal_name="Divergence between Lineside Signal and ERTMS Information" subgoal_dim="goal" alternative_id="0" >
+  <rationale>Signalling Operations.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="ERTMS Signalling Operations" goal_dim="goal" ref_type="and" subgoal_name="ERTMS Intermediate Block Sections" subgoal_dim="goal" alternative_id="0" >
+  <rationale>ERTMS intermediate block sections must only be used to signal fitted trains with an ERTMS MA.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="ERTMS Signalling Operations" goal_dim="goal" ref_type="and" subgoal_name="Approach Locking" subgoal_dim="goal" alternative_id="0" >
+  <rationale>Approach Locking for the route ahead must still be applied for fitted trains when an ERTMS MA cannot be given for the route ahead.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Approach Locking" goal_dim="goal" ref_type="and" subgoal_name="Approach Locking Application" subgoal_dim="goal" alternative_id="0" >
+  <rationale>Where instead of a movement authority permission to proceed is granted, ideally approach locking should be applied.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Approach Locking" goal_dim="goal" ref_type="and" subgoal_name="Approach Locking Release" subgoal_dim="goal" alternative_id="0" >
+  <rationale>Approach locking must only be released for a fitted train.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="ERTMS Signalling Operations" goal_dim="goal" ref_type="and" subgoal_name="Route Locking" subgoal_dim="goal" alternative_id="0" >
+  <rationale>Route locking must be applied once the route has been set.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Route Locking" goal_dim="goal" ref_type="and" subgoal_name="Route Locking Application" subgoal_dim="goal" alternative_id="0" >
+  <rationale>Route locking must be applied once the route has been set.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Route Locking" goal_dim="goal" ref_type="and" subgoal_name="Route Locking Release Initiation" subgoal_dim="goal" alternative_id="0" >
+  <rationale>Route locking release can only occur once approach locking is released</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Approach Locking Release" goal_dim="goal" ref_type="and" subgoal_name="Route Locking Release Initiation" subgoal_dim="goal" alternative_id="0" >
+  <rationale>Route locking release can only occur once approach locking is released</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Route Locking" goal_dim="goal" ref_type="and" subgoal_name="Route Release Failure Management" subgoal_dim="goal" alternative_id="0" >
+  <rationale>Functionality must be provided to enable the release of a route during all credible ERTMS failure conditions.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Route Locking" goal_dim="goal" ref_type="and" subgoal_name="Sectional Route Locking" subgoal_dim="goal" alternative_id="0" >
+  <rationale>Sectional route locking must be maintained in front of the train for the remainder of the route.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="ERTMS Signalling Operations" goal_dim="goal" ref_type="and" subgoal_name="Loss of Signal Proving" subgoal_dim="goal" alternative_id="0" >
+  <rationale>Inherent delays in the signalling system.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="ERTMS Signalling Operations" goal_dim="goal" ref_type="and" subgoal_name="Movement Authority Timers" subgoal_dim="goal" alternative_id="0" >
+  <rationale>Number of timers associated with MAs.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="ERTMS Signalling Operations" goal_dim="goal" ref_type="and" subgoal_name="Change of Route or Regulation" subgoal_dim="goal" alternative_id="0" >
+  <rationale>The conventional rules for changing the regulation must continue to be applied.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="ERTMS Signalling Operations" goal_dim="goal" ref_type="and" subgoal_name="Flank Protection" subgoal_dim="goal" alternative_id="0" >
+  <rationale>The need for flank protection for trains operating with an ERTMS MA.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="ERTMS Signalling Operations" goal_dim="goal" ref_type="and" subgoal_name="Interlocking Overlaps" subgoal_dim="goal" alternative_id="0" >
+  <rationale>A facility must be provided for an overlap to be released as soon as it is no longer required at pre-determined locations.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="ERTMS Signalling Operations" goal_dim="goal" ref_type="and" subgoal_name="Local Point Release" subgoal_dim="goal" alternative_id="0" >
+  <rationale>Locally released points must be proved normal and locked before any ERTMS MA over them can be issued.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="ERTMS Signalling Operations" goal_dim="goal" ref_type="and" subgoal_name="Bi-Directional Running" subgoal_dim="goal" alternative_id="0" >
+  <rationale>The provision of bi-directional capability will require appropriate signalling controls.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Access Railway Network" goal_dim="goal" ref_type="and" subgoal_name="Modify TV Remote Control" subgoal_dim="goal" alternative_id="0" >
+  <rationale>By using a modified TV remote control.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Redirect Railway Trams" goal_dim="goal" ref_type="and" subgoal_name="Access Railway Network" subgoal_dim="goal" alternative_id="0" >
+  <rationale>By getting into railway network.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Route Setting and Movement Authorities" goal_dim="goal" ref_type="and" subgoal_name="Issue ERTMS Movement Authority" subgoal_dim="task" alternative_id="0" >
+  <rationale>Once the route is requested and open, the appropriate ERTMS Movement Authority will be sent to a train providing that any other relevant conditions are met.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Route Setting and Movement Authorities" goal_dim="goal" ref_type="and" subgoal_name="Issue ERTMS Movement Authority" subgoal_dim="task" alternative_id="0" >
+  <rationale></rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Change of Route or Regulation" goal_dim="goal" ref_type="and" subgoal_name="Change in Regulation" subgoal_dim="task" alternative_id="0" >
+  <rationale>The signaller must be provided with a means to initiate the cancellation of a route.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Access Railway Network" goal_dim="goal" ref_type="responsible" subgoal_name="Record Signals and Replay" subgoal_dim="task" alternative_id="0" >
+  <rationale>Record signals to re-direct trams.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Modify TV Remote Control" goal_dim="goal" ref_type="resolve" subgoal_name="Building an Infrared Device" subgoal_dim="task" alternative_id="0" >
+  <rationale>Based on information from class and internet.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Modify TV Remote Control" goal_dim="goal" ref_type="responsible" subgoal_name="Learn Coding Skills" subgoal_dim="task" alternative_id="0" >
+  <rationale>get codes from internet.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Redirect Railway Trams" goal_dim="goal" ref_type="responsible" subgoal_name="Switch Track Points" subgoal_dim="task" alternative_id="0" >
+  <rationale>In order to re-direct trams.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Interlocking Overlaps" goal_dim="goal" ref_type="or" subgoal_name="Onboard Warning or Intervention" subgoal_dim="obstacle" alternative_id="0" >
+  <rationale>An onboard warning or intervention.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Interlocking Overlaps" goal_dim="goal" ref_type="or" subgoal_name="Loss of Proving" subgoal_dim="obstacle" alternative_id="0" >
+  <rationale>A loss of proving</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Interlocking Overlaps" goal_dim="goal" ref_type="or" subgoal_name="Unsafe Discrepancy" subgoal_dim="obstacle" alternative_id="0" >
+  <rationale>An unsafe discrepancy between the ERTMS onboard supervised location and the track section locked by the interlocking.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Interlocking Overlaps" goal_dim="goal" ref_type="or" subgoal_name="Driver Misconception" subgoal_dim="obstacle" alternative_id="0" >
+  <rationale>A driver believing that an ERTMS MA has been extended</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Modify TV Remote Control" goal_dim="goal" ref_type="obstruct" subgoal_name="Un-reliable Open Source Data" subgoal_dim="obstacle" alternative_id="0" >
+  <rationale>Data from internet is un-verifiable.</rationale>
+</goal_association>
+<goal_association environment="Morning Shift"  goal_name="Access Railway Network" goal_dim="goal" ref_type="obstruct" subgoal_name="Advance Train Control Protocal System" subgoal_dim="obstacle" alternative_id="0" >
+  <rationale>Network access is denied.</rationale>
+</goal_association>
+</associations>
+
+<synopses>
+</synopses>
+
+<misusability>
+</misusability>
+
+<dataflows>
+</dataflows>
+
+
+
+</cairis_model>
